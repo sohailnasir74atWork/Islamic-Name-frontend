@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Basic:ital,wght@0,400;0,700;1,400&display=swap");
 
 :root {
   --color-one: #2b6777;
@@ -8,9 +8,12 @@
   --color-four: #f2f2f2;
   --color-five: #52ab98;
   --text-font: Nunito;
+  --button-font: Genty sans;
 }
 
-
+body {
+  font-family: 'Gentium Basic', serif;
+}
 
 .App {
   text-align: center;
@@ -52,4 +55,7 @@
 }
 .flex-box{
   display: flex;
+}
+li, ul {
+  list-style-type: none;
 }

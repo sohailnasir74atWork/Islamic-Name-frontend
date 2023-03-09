@@ -2,10 +2,19 @@
     max-height: 100px;
     background-color: var(--color-three);
     font-family: var(--text-font);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);;
 }
 .logo-container{
     height: 100px;
+    padding-right: 100px;
 }
 .logo-container img{
     max-height: 100%;
+}
+
+
+li{
+   font-family: var(--text-font);
+   font-weight: 600;
+   color: var(--color-one);
 }
