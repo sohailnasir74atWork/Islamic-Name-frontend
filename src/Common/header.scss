@@ -6,7 +6,7 @@
 }
 .logo-container{
     height: 100px;
-    padding-right: 100px;
+    padding-right: 70px;
 }
 .logo-container img{
     max-height: 100%;
@@ -17,4 +17,13 @@ li{
    font-family: var(--text-font);
    font-weight: 600;
    color: var(--color-one);
+}
+li:hover{
+    color: var(--color-five);
+ }
+.dark-mode{
+    padding-left: 10px;
+    color:var(--dark-mode);
+    font-weight: 600;
+    font-size: 1rem;
 }

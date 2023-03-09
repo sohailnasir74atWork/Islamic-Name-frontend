@@ -7,6 +7,7 @@
   --color-three: #ffffff ;
   --color-four: #f2f2f2;
   --color-five: #52ab98;
+  --dark-mode:#363636;
   --text-font: Nunito;
   --button-font: Genty sans;
 }
@@ -55,6 +56,10 @@ body {
 }
 .flex-box{
   display: flex;
+}
+.flex-box-col{
+  display: flex;
+  flex-direction: column;
 }
 li, ul {
   list-style-type: none;
