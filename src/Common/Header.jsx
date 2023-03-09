@@ -1,6 +1,6 @@
 import React from 'react'
 import "./header.scss"
-import logo from "../images/logo-2.svg"
+import logo from "../images/logo-1.svg"
 const Header = () => {
   return (
     <div className='header-container'>
