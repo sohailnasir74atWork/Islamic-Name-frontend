@@ -1,0 +1,19 @@
+.custimize-btn{
+    background-color: initial;
+    border: initial;
+    font: initial;
+    padding: 20px;
+    margin: 0px 10px;
+    width:100%;
+    background-color: var(--color-one);
+    color: var(--color-three);
+    font-family: var(--text-font);
+}
+.p-0{
+    padding: 0px;
+}
+.trending-cards-cont{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+   }

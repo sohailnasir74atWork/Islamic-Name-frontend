@@ -1,0 +1,40 @@
+.trending-card{
+    width:100%;
+    margin: 20px 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-title{
+    display: flex;
+    border-left: 1rem solid var(--color-five);
+    margin: 10px 0px;
+    padding-left: 1rem;
+    font-family: var(--text-font);
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+th{
+    background-color: var(--color-five);
+    width: 100%;
+    text-align: left;
+    display: flex;
+    padding-left: 1rem;
+    height: 60px;
+    align-items: center;
+    font-family: var(--text-font);
+}
+td {
+    text-align: left;
+    width: 100%;
+    padding-left: 1rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-family: var(--text-font);
+}
+
+.urdu-cont{
+    justify-content: center;
+    font-family: var(--urdu-font);
+    font-size: 1.2rem;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import banner from "../../images/banner.jpg"
-import "./Banner.scss"
 import search from "../../images/search.svg"
+import "./Style/Banner.scss"
 const Banner = () => {
   return (
     <div className='banner-container'>
