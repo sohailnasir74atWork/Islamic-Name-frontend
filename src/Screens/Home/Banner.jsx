@@ -1,8 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import ShapeAnimation from '../../Common/ShapeContainer'
-import banner from "../../images/banner.svg"
-import search from "../../images/search.svg"
 import "./Style/Banner.scss"
 const Banner = () => {
   return (

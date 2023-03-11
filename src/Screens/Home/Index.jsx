@@ -1,5 +1,4 @@
 import React from 'react'
-import ShapeContainer from '../../Common/ShapeContainer'
 import ABCsection from './ABCsection'
 import Banner from './Banner'
 import PoweredbyCommunity from './PoweredbyCommunity'
