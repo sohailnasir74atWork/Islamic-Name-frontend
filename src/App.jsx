@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import AOSwrapper from './Common/AOSwrapper';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -25,9 +26,11 @@ const router = createBrowserRouter([
 
 function App() {
   return (
+    <AOSwrapper>
     <div className="App">
       <RouterProvider router={router}/>
     </div>
+    </AOSwrapper>
   );
 }
 

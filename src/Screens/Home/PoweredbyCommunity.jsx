@@ -2,7 +2,7 @@ import React from 'react'
 import "../Home/Style/PoweredbyCommunity.scss"
 const PoweredbyCommunity = () => {
     return (
-        <div className='container'>
+        <div className='container' data-aos="fade-up">
             <div className='row d-flex'>
                 <div><h2 className='section-title-main'>IMPORTANCE OF MEANINGFUL NAME</h2></div>
                 <div className='row'>

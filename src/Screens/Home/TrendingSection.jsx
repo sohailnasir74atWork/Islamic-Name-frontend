@@ -12,7 +12,7 @@ const TrendingSection = () => {
 
   return (
     <div>
-      <div className='container'>
+      <div className='container' data-aos="fade-up">
         <h2 className='section-title-main'>SEARCH NAMES BY FEATURES</h2>
         <div className='section-container'>
           <div className='container w-30'>
