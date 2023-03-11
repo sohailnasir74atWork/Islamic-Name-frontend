@@ -1,18 +1,10 @@
 .trending-card{
     width:100%;
     margin: 20px 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+
 }
 
-.section-title{
-    display: flex;
-    border-left: 1rem solid var(--color-five);
-    margin: 10px 0px;
-    padding-left: 1rem;
-    font-family: var(--text-font);
-    font-size: 1.7rem;
-    font-weight: 900;
-}
 th{
     background-color: var(--color-five);
     width: 100%;
@@ -33,8 +25,20 @@ td {
     font-family: var(--text-font);
 }
 
+.line-color:nth-child(odd) {
+    background-color: lightgrey;
+  }
 .urdu-cont{
     justify-content: center;
     font-family: var(--urdu-font);
     font-size: 1.2rem;
+}
+.pagination-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+   
+}
+.page-link, .page-link:hover, .page-link:active {
+    color: var(--color-one);
 }

@@ -1,9 +1,19 @@
+.section-container{
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.2), /* top shadow */
+    0 4px 4px 0 rgba(0,0,0,0.2), /* bottom shadow */
+    4px 0 4px 0 rgba(0,0,0,0.2), /* right shadow */
+    -4px 0 4px 0 rgba(0,0,0,0.2); /* left shadow */
+    padding:1rem 0px;
+    margin: 1rem 0px;
+}
 .custimize-btn{
     background-color: initial;
     border: initial;
     font: initial;
     padding: 20px;
     margin: 0px 10px;
+    font-size: 1rem;
+    font-weight: 600;
     width:100%;
     background-color: var(--color-one);
     color: var(--color-three);
@@ -16,4 +26,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+   }
+   .active{
+    background-color: var(--color-five);
    }

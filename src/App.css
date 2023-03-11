@@ -10,6 +10,8 @@
   --color-four: #f2f2f2;
   --color-five: #52ab98;
   --dark-mode:#363636;
+  --color-six:#afc5da;
+  --color-seven:#fedfb1;
   --text-font: Nunito;
   --button-font: Genty sans;
   --urdu-font:Jameel Noori Nastaleeq;
@@ -66,4 +68,32 @@ li, ul {
 .flex-center{
   justify-content: center;
 display: flex;
+}
+.w-50{
+  width:50%
+}
+.w-100{
+  width: 100%;
+}
+.section-title-main{
+  display: flex;
+  border-left: 1rem solid var(--color-one);
+  margin: 40px 0px;
+  padding:1rem;
+  font-family: var(--text-font);
+  font-size: 2rem;
+  font-weight: 900;
+  /* background-color: var(--color-one); */
+  color: var(--color-one);
+}
+.section-title{
+  display: flex;
+  /* border-left: 1rem solid var(--color-one); */
+  margin: 10px 0px;
+  padding-left: 1rem;
+  font-family: var(--text-font);
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--color-one);
+
 }

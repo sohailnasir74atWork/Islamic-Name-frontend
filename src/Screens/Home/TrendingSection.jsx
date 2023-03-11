@@ -1,22 +1,57 @@
 import React from 'react'
 import TrendingCard from './Cards/TrendingCard'
 import "./Style/TrendingSection.scss"
+import { useState } from 'react';
+
 const TrendingSection = () => {
+  const [activeBtnIndex, setActiveBtnIndex] = useState(0);
+
+  const handleButtonClick = (index) => {
+    setActiveBtnIndex(index);
+  };
+
   return (
     <div>
+      <div className='container'>
+        <h2 className='section-title-main'>SEARCH NAMES BY FEATURES</h2>
+        <div className='section-container'>
         <div className='container'>
-        <div className='row'>
-        <div className='col flex-center'><button className='custimize-btn'>TRENDING</button></div>
-        <div className='col flex-center'><button className='custimize-btn'>POPULAR</button></div>
-        <div className='col flex-center'><button className='custimize-btn'>NEW ADDED</button></div>
+          <div className='row'>
+            <div className='col flex-center p-0'>
+              <button
+                className={`custimize-btn ml-0 ${activeBtnIndex === 0 ? 'active' : ''}`}
+                onClick={() => handleButtonClick(0)}
+              >
+                TRENDING
+              </button>
+            </div>
+            <div className='col flex-center p-0'>
+              <button
+                className={`custimize-btn  ${activeBtnIndex === 1 ? 'active' : ''}`}
+                onClick={() => handleButtonClick(1)}
+              >
+                POPULAR
+              </button>
+            </div>
+            <div className='col flex-center p-0'>
+              <button
+                className={`custimize-btn ${activeBtnIndex === 2 ? 'active' : ''}`}
+                onClick={() => handleButtonClick(2)}
+              >
+                NEW ADDED
+              </button>
+            </div>
+          </div>
         </div>
         <div className='trending-cards-cont'>
-            <TrendingCard />
-            <TrendingCard />
+          <TrendingCard />
+          <TrendingCard />
         </div>
-         </div>
+        </div>
+      </div>
     </div>
   )
 }
+
 
 export default TrendingSection
