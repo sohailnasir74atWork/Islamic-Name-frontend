@@ -17,4 +17,8 @@ background-color: var(--color-one) !important;
 .card-header{
     font-family: var(--text-font);
     font-weight: 900;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
