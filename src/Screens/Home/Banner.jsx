@@ -16,7 +16,7 @@ const Banner = () => {
   <input type="text" class="form-control h-50" placeholder="Search Name"/>
   <div class="input-group-append">
     <button class="btn btn-outline-secondary h-50" type="button">
-    <i class="far fa-search"></i>    </button>
+    <i class="fa-regular fa-magnifying-glass"></i>    </button>
   </div>
 </div>
   </div>

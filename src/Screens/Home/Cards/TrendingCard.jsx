@@ -31,6 +31,21 @@ const Data = [
       name: "Ayesha",
       meaning: "Living, prosperous",
       urdu: "زندہ، خوشحال"
+    },
+    {
+      name: "Zainab",
+      meaning: "Fragrant flower",
+      urdu: "خوشبو دار پھول"
+    },
+    {
+      name: "Imran",
+      meaning: "Prosperity",
+      urdu: "ترقی"
+    },
+    {
+      name: "Ayesha",
+      meaning: "Living, prosperous",
+      urdu: "زندہ، خوشحال"
     }
   ]
   
@@ -38,7 +53,7 @@ const Data = [
 const TrendingCard = () => {
     return (
         <div className='trending-card'>
-            <div className='section-title'>Boys Names</div>
+           
             <div>
                 <div className='d-flex'>
                 <th>
@@ -56,6 +71,12 @@ const TrendingCard = () => {
                 معنی
                    
                 </th>
+                <th className='support-cont'>
+                   
+                Support
+                <i class="fa-regular fa-heart fa-solid p-3 heart"></i>
+                   
+                </th>
                 </div>
                 
                 
@@ -68,7 +89,11 @@ const TrendingCard = () => {
                        {item.meaning}
                     </td>
                     <td className='urdu-cont'>
-{item.urdu}                    </td></div>)}
+{item.urdu}                    </td><td className='urdu-cont'>
+  <span className='span-heart'>1650 People liked</span>
+<i class="fa-regular fa-heart fa-solid p-3 heart"></i>
+</td>
+</div>)}
                     )
                    }
                 <div className='pagination-container'>

@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Gentium+Basic:ital,wght@0,400;0,700;1,400&display=swap");
 @import url('https://fonts.cdnfonts.com/s/12183/Jameel-Noori-Nastaleeq.woff2');
 @import  url('https://fonts.cdnfonts.com/s/12183/Jameel-Noori-Nastaleeq.woff');
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import url(https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Grand+Hotel&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300&family=Antonio:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Grand+Hotel&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300&family=Exo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);
 
 :root {
   --color-one: #2b6777;
@@ -12,6 +15,9 @@
   --dark-mode:#363636;
   --color-six:#afc5da;
   --color-seven:#fedfb1;
+  --heading-font:Antonio;
+  --button-font:Exo;
+
   --text-font: Nunito;
   --button-font: Genty sans;
   --urdu-font:Jameel Noori Nastaleeq;
@@ -80,8 +86,8 @@ display: flex;
   border-left: 1rem solid var(--color-one);
   margin: 40px 0px;
   padding:1rem;
-  font-family: var(--text-font);
-  font-size: 2rem;
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
   font-weight: 900;
   /* background-color: var(--color-one); */
   color: var(--color-one);
@@ -91,9 +97,37 @@ display: flex;
   /* border-left: 1rem solid var(--color-one); */
   margin: 10px 0px;
   padding-left: 1rem;
-  font-family: var(--text-font);
-  font-size: 1.7rem;
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
   font-weight: 900;
   color: var(--color-one);
 
+}
+th{
+  background-color: var(--color-five);
+  width: 100%;
+  text-align: left;
+  display: flex;
+  padding-left: 1rem;
+  height: 60px;
+  align-items: center;
+  font-family: var(--text-font);
+}
+td {
+  text-align: left;
+  width: 100%;
+  padding-left: 1rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-family: var(--text-font);
+}
+tr {
+  text-align: left;
+  width: 100%;
+  padding-left: 1rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-family: var(--text-font);
 }

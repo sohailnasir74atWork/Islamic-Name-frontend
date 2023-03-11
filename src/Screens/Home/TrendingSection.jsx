@@ -15,36 +15,27 @@ const TrendingSection = () => {
       <div className='container'>
         <h2 className='section-title-main'>SEARCH NAMES BY FEATURES</h2>
         <div className='section-container'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col flex-center p-0'>
+        <div className='container w-30'>
+          <div className='col'>
+            <div className='col flex-center p-0 trending-card'>
               <button
                 className={`custimize-btn ml-0 ${activeBtnIndex === 0 ? 'active' : ''}`}
                 onClick={() => handleButtonClick(0)}
               >
-                TRENDING
+                BOYES NAME
               </button>
             </div>
-            <div className='col flex-center p-0'>
+            <div className='col flex-center p-0 trending-card'>
               <button
                 className={`custimize-btn  ${activeBtnIndex === 1 ? 'active' : ''}`}
                 onClick={() => handleButtonClick(1)}
               >
-                POPULAR
-              </button>
-            </div>
-            <div className='col flex-center p-0'>
-              <button
-                className={`custimize-btn ${activeBtnIndex === 2 ? 'active' : ''}`}
-                onClick={() => handleButtonClick(2)}
-              >
-                NEW ADDED
+                GIRLS NAME
               </button>
             </div>
           </div>
         </div>
         <div className='trending-cards-cont'>
-          <TrendingCard />
           <TrendingCard />
         </div>
         </div>

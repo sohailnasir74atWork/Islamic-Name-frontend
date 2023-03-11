@@ -1,10 +1,11 @@
 .section-container{
-    box-shadow: 0 0 4px 0 rgba(0,0,0,0.2), /* top shadow */
-    0 4px 4px 0 rgba(0,0,0,0.2), /* bottom shadow */
-    4px 0 4px 0 rgba(0,0,0,0.2), /* right shadow */
-    -4px 0 4px 0 rgba(0,0,0,0.2); /* left shadow */
+    // box-shadow: 0 0 2px 0 rgba(0,0,0,0.2), /* top shadow */
+    // 0 2px 2px 0 rgba(0,0,0,0.2), /* bottom shadow */
+    // 2px 0 2px 0 rgba(0,0,0,0.2), /* right shadow */
+    // -2px 0 2px 0 rgba(0,0,0,0.2); /* left shadow */
     padding:1rem 0px;
     margin: 1rem 0px;
+    display: flex;
 }
 .custimize-btn{
     background-color: initial;
@@ -15,8 +16,8 @@
     font-size: 1rem;
     font-weight: 600;
     width:100%;
-    background-color: var(--color-one);
-    color: var(--color-three);
+    // background-color: var(--color-one);
+    color: var(--color-one);
     font-family: var(--text-font);
 }
 .p-0{
@@ -29,4 +30,8 @@
    }
    .active{
     background-color: var(--color-five);
+    color: var(--color-three);
+   }
+   .w-30{
+    width: 30%;
    }
