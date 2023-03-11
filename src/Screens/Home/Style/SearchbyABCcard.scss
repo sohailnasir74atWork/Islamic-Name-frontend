@@ -11,3 +11,10 @@
 .ABC-container  li{
     padding: 20px;
 }
+.bg-secondary{
+background-color: var(--color-one) !important;
+}
+.card-header{
+    font-family: var(--text-font);
+    font-weight: 900;
+}
