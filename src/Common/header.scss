@@ -29,3 +29,7 @@ li:hover{
     font-weight: 600;
     font-size: 1rem;
 }
+.form-check-input:checked {
+    background-color: var(--color-one);
+    border-color: var(--color-one);
+  }
