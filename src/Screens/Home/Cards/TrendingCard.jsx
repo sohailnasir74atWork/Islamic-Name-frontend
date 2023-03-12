@@ -58,7 +58,7 @@ const Data = [
   }
 ]
 
-const TrendingCard = () => {
+const TrendingCard = ({ cardClass }) => {
   const [like, setLike] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedGender, setSelectedGender] = useState('GENDER');
@@ -84,7 +84,7 @@ const TrendingCard = () => {
       <div>
         <div className='d-flex'>
           <th>NAMES</th>
-          <th>
+          <th className={cardClass}>
             <div className='gender-select'>
               <div
                 className='gender-select-header'
@@ -114,7 +114,7 @@ const TrendingCard = () => {
           return (
             <div className='d-flex line-color'>
               <td>{item.name}</td>
-              <td>{item.gender}</td>
+              <td className={cardClass}>{item.gender}</td>
               <td>{item.meaning}</td>
               <td className='urdu-cont'>{item.urdu}</td>
               <td className='urdu-cont'>
