@@ -5,47 +5,56 @@ const Data = [
   {
     name: "Sohail",
     meaning: "A shining star",
-    urdu: "چمکتا ستارہ"
+    urdu: "چمکتا ستارہ",
+    gender: "Boy"
   },
   {
     name: "Fatima",
     meaning: "One who abstains",
-    urdu: "ایک جو باز رہتی ہے"
+    urdu: "ایک جو باز رہتی ہے",
+    gender: "Boy"
   },
   {
     name: "Hamza",
     meaning: "Lion",
-    urdu: "شیر"
+    urdu: "شیر",
+    gender: "Boy"
   },
   {
     name: "Zainab",
     meaning: "Fragrant flower",
-    urdu: "خوشبو دار پھول"
+    urdu: "خوشبو دار پھول",
+    gender: "Girl"
   },
   {
     name: "Imran",
     meaning: "Prosperity",
-    urdu: "ترقی"
+    urdu: "ترقی",
+    gender: "Boy"
   },
   {
     name: "Ayesha",
     meaning: "Living, prosperous",
-    urdu: "زندہ، خوشحال"
+    urdu: "زندہ، خوشحال",
+    gender: "Gril"
   },
   {
     name: "Zainab",
     meaning: "Fragrant flower",
-    urdu: "خوشبو دار پھول"
+    urdu: "خوشبو دار پھول",
+    gender: "Girl"
   },
   {
     name: "Imran",
     meaning: "Prosperity",
-    urdu: "ترقی"
+    urdu: "ترقی",
+    gender: "Boy"
   },
   {
     name: "Ayesha",
     meaning: "Living, prosperous",
-    urdu: "زندہ، خوشحال"
+    urdu: "زندہ، خوشحال",
+    gender: "Girl"
   }
 ]
 
@@ -62,6 +71,9 @@ const TrendingCard = () => {
             NAMES
           </th>
           <th>
+            GENDER
+          </th>
+          <th>
             MEANINGS
           </th>
           <th className='urdu-cont'>
@@ -76,6 +88,9 @@ const TrendingCard = () => {
           return (<div className='d-flex line-color'>
             <td>
               {item.name}
+            </td>
+            <td>
+              {item.gender}
             </td>
             <td>
               {item.meaning}
