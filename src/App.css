@@ -10,7 +10,7 @@
   --color-one: #2b6777;
   --color-two: #c8d8e4;
   --color-three: #ffffff ;
-  --color-four: #f2f2f2;
+  --color-four: #ffffff;
   --color-five: #2b6777;
   --dark-mode:#363636;
   --color-six:#afc5da;
@@ -131,4 +131,7 @@ tr {
   display: flex;
   align-items: center;
   font-family: var(--text-font);
+}
+.pt-6{
+  padding : 5rem 0px;
 }

@@ -9,7 +9,9 @@
     padding: 0px;
 }
 .ABC-container  li{
-    padding: 20px;
+    padding: 10px;
+    margin: 10px;
+
 }
 .bg-secondary{
 background-color: var(--color-one) !important;
@@ -27,6 +29,6 @@ background-color: var(--color-one) !important;
         background: white;
         color: var(--color-one);
         border-radius: 5px;
-        transform: scale(1.1);
+        transform: scale(1.2);
         transition: transform 0.3s ease-in-out;
     }
