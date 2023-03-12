@@ -25,6 +25,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  
   return (
     <AOSwrapper>
     <div className="App">

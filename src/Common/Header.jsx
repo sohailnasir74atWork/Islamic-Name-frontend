@@ -2,6 +2,12 @@ import React from 'react'
 import "./header.scss"
 import logo from "../images/logo-1.svg"
 const Header = () => {
+  const handleClick = () => {
+    const element = document.getElementById("trending");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className='header-container'>
       <div className='flex-box container'>
@@ -9,19 +15,19 @@ const Header = () => {
           <img src={logo} alt="logo" /></div>
         <div className='col mt-auto'>
           <ul className='row'>
-            <li className='col'>
+            <li className='col' onClick={handleClick}>
               Allah's Names
             </li>
-            <li className='col'>
+            <li className='col' onClick={handleClick}>
               Tending Name
             </li >
-            <li className='col'> 
+            <li className='col' onClick={handleClick}> 
               New Added
             </li>
-            <li className='col'>
+            <li className='col' onClick={handleClick}>
               Poluar Name
             </li>
-            <li className='col'>
+            <li className='col' onClick={handleClick}>
               Quranic Names
             </li>
             <li className='col'>

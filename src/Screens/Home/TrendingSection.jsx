@@ -2,7 +2,7 @@ import React from 'react'
 import TrendingCard from './Cards/TrendingCard'
 import "./Style/TrendingSection.scss"
 import { useState } from 'react';
-
+import { useRef } from 'react';
 const TrendingSection = () => {
   const [activeBtnIndex, setActiveBtnIndex] = useState(0);
 
@@ -11,7 +11,7 @@ const TrendingSection = () => {
   };
 
   return (
-    <div>
+    <div id="trending">
       <div className='container' data-aos="fade-up">
         <h2 className='section-title-main'>SEARCH NAMES BY FEATURES</h2>
         <div className='section-container'>

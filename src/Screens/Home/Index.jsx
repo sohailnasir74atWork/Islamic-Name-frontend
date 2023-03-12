@@ -1,4 +1,5 @@
 import React from 'react'
+import ExtractData from '../../Common/DataExtracter'
 import ABCsection from './ABCsection'
 import Banner from './Banner'
 import PoweredbyCommunity from './PoweredbyCommunity'
@@ -12,6 +13,7 @@ const Home = () => {
         <ABCsection/>
         <TrendingSection/>
         <PoweredbyCommunity/>
+        <ExtractData/>
     </div>
   )
 }
