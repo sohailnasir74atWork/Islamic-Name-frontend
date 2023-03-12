@@ -16,10 +16,10 @@ const Header = () => {
               Tending Name
             </li >
             <li className='col'> 
-              Boyes Names
+              New Added
             </li>
             <li className='col'>
-              Grils Name
+              Poluar Name
             </li>
             <li className='col'>
               Quranic Names
