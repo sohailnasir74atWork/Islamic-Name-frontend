@@ -1,6 +1,7 @@
 
 .ABC-card-container{
-    padding: 10px;
+    // padding: 10px;
+    width: 98%;
 }
 .ABC-container{
     display: flex;
@@ -9,6 +10,13 @@
     font-family: var(--text-font);
     padding: 0px;
 }
+@media (max-width: 550px) {
+    .ABC-card-container{
+       width: 100%;
+       padding: 0px 10px;
+  
+     }
+    }
 .ABC-container  li{
     padding: 10px;
     margin: 10px;

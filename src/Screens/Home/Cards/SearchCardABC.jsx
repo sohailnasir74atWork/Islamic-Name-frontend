@@ -7,7 +7,7 @@ const SearchCardABC = () => {
 
   return (
     <div className='ABC-card-container col flex-center'>
-      <div class="card text-white bg-secondary mb-3" style={{maxWidth: "38rem"}}>
+      <div class="card text-white bg-secondary mb-3" style={{maxWidth: "50rem"}}>
   <div class="card-header">BOYES NAMES BY ALPHABETS</div>
   <div class="card-body">
   <ul className='ABC-container'>
