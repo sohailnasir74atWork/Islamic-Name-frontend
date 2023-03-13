@@ -18,7 +18,7 @@ const router = createBrowserRouter([
         element: <Home/>,
       },
       {
-        path: "alphabet",
+        path: "alphabet/:id",
         element: <ByAlphabets/>,
       },
     ]

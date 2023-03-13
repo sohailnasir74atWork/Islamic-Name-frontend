@@ -1,6 +1,7 @@
 import React from 'react'
 import "./header.scss"
 import logo from "../images/logo-1.svg"
+import { Link } from 'react-router-dom'
 const Header = () => {
   const handleClick = () => {
     const element = document.getElementById("trending");
@@ -12,7 +13,8 @@ const Header = () => {
     <div className='header-container'>
       <div className='flex-box container'>
         <div className='logo-container'>
-          <img src={logo} alt="logo" /></div>
+          <Link to="/">
+          <img src={logo} alt="logo" /></Link></div>
         <div className='col mt-auto'>
           <ul className='row'>
             <li className='col' onClick={handleClick}>
