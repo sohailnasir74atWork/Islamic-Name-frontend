@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./header.scss"
 import logo from "../images/logo-1.svg"
 import { Link } from 'react-router-dom'
@@ -6,8 +6,21 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const Header = () => {
+  
   const location = useLocation();
-
+  const [showIcon, setShowIcon] = useState(false); // new state variable
+  useEffect(() => {
+    function handleScroll() {
+      const mySection = document.getElementById('bars-stop');
+      if (window.scrollY >= mySection.offsetTop) {
+        setShowIcon(false);
+      } else {
+        setShowIcon(true);
+      }
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [document.getElementById('bars-stop')]);
   useEffect(() => {
     if (location.pathname === "/trending" ) {
       const trendingSection = document.getElementById("trending");
@@ -31,6 +44,7 @@ const Header = () => {
         <div className='logo-container'>
           <Link to="/">
           <img src={logo} alt="logo" /></Link></div>
+          {showIcon && <div className='sticky-button'><i class="fa-solid fa-bars"></i></div>}
         <div className='col mt-auto mobile-header'>
           <ul className='row'>
             <li className='col' >

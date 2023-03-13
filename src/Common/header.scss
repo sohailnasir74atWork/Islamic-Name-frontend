@@ -52,3 +52,29 @@ li:hover{
      display: none; 
      }
     }
+.sticky-button{
+    display: none;
+}
+@media (max-width: 550px) {
+    .sticky-button {
+     display: block;
+     position: fixed;
+     top:100px; 
+     right: 50px;
+     color:#eb008b;
+     font-size: 1.5em;
+     z-index: 10;
+     }
+    }
+    @media (max-width: 550px) {
+        .sticky-button i {
+         display: block;
+         position: fixed; 
+         }
+        }
+        .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+            margin-left: -1px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            z-index: 1;
+          }
