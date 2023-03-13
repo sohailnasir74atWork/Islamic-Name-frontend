@@ -19,8 +19,6 @@ const data = [
 
 ]
 
-
-
 const PoweredbyCommunity = () => {
     return (
         <div style={{background:"var(--color-four)"}} className="pt-6" id="bars-stop">

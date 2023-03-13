@@ -58,7 +58,7 @@ li:hover{
 @media (max-width: 550px) {
     .sticky-button {
      display: block;
-     position: fixed;
+     position: absolute;
      top:100px; 
      right: 50px;
      color:#eb008b;
