@@ -5,6 +5,14 @@
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+@media (max-width: 550px) {
+    .community-card{
+        width:100%;
+        text-align: center;
+       
+  
+     }
+    }
 .card-img-top{
     min-height: 200px;
     background-image: url(https://res.cloudinary.com/dgupxycnh/image/upload/v1678687010/Untitled_design_2_odtx7o.svg);
@@ -16,6 +24,12 @@
     overflow: hidden;
     background-color: aliceblue;
 }
+@media (max-width: 550px) {
+    .card-text{
+    max-height: 100px;
+  
+     }
+    }
 .heading-en{
     font-size: 1.5rem;
     text-align: left;

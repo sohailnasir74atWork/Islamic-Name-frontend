@@ -6,10 +6,21 @@
     z-index: 2;
     position: relative;
 }
+@media (max-width: 550px) {
+    .header-logo-mobile {
+     justify-content: center;
+     display: flex;
+     }
+    }
 .logo-container{
     height: 90px;
     padding-right: 50px;
 }
+@media (max-width: 550px) {
+    .logo-container {
+        padding-right: 0px;
+     }
+    }
 .logo-container img{
     max-height: 100%;
 }
@@ -36,3 +47,8 @@ li:hover{
   a:hover{
     color: var(--color-two);
   }
+  @media (max-width: 550px) {
+    .mobile-header {
+     display: none; 
+     }
+    }

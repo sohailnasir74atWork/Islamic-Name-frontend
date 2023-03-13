@@ -6,6 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: var(--text-font);
     padding: 0px;
 }
 .ABC-container  li{
@@ -13,6 +14,13 @@
     margin: 10px;
 
 }
+@media (max-width: 550px) {
+    .ABC-container  li{
+        padding: 5px;
+        margin: 5px;
+  
+     }
+    }
 .bg-secondary{
 background-color: var(--color-one) !important;
 }
@@ -31,4 +39,14 @@ background-color: var(--color-one) !important;
         border-radius: 5px;
         transform: scale(1.2);
         transition: transform 0.3s ease-in-out;
+    }
+    @media (max-width: 550px) {
+        .ABC-container li:hover{
+        background: white;
+        color: var(--color-one);
+        border-radius: 5px;
+        transform: scale(1.2);
+        transition: transform 0.3s ease-in-out;
+      
+         }
     }

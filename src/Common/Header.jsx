@@ -27,11 +27,11 @@ const Header = () => {
  
   return (
     <div className='header-container'>
-      <div className='flex-box container'>
+      <div className='flex-box container header-logo-mobile '>
         <div className='logo-container'>
           <Link to="/">
           <img src={logo} alt="logo" /></Link></div>
-        <div className='col mt-auto'>
+        <div className='col mt-auto mobile-header'>
           <ul className='row'>
             <li className='col' >
               <Link to="/trending" onClick={handleClick}>

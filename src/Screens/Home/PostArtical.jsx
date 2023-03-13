@@ -23,6 +23,9 @@ const PostArtical = () => {
                         id="exampleFormControlTextarea1" rows="4"></textarea>
                         </div>
                     </div>
+                    <div className='m-3'>
+                    <a href="" className="btn btn-primary">READ FULL</a>
+                    </div>
                 </form>
             </div>
         </div>
