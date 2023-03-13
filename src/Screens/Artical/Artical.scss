@@ -1,18 +1,27 @@
 .text-ar-en {
-font-size: 1.5rem;
+font-size: 1.3rem;
 text-align: justify;
+line-height: 3rem;
+
 }
 .text-ar-ur {
     font-size: 1.5rem;
     text-align: right;
     font-family: var(--urdu-font);
+    padding: 30px;
+    line-height: 3rem;
 
 }
 .heading-ar-en {
     font-size: 3rem;
+
     
 }
 .heading-ar-ur {
     font-size: 3rem;
     font-family: var(--urdu-font);
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    border: none;
 }
