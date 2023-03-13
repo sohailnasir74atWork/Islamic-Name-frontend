@@ -10,7 +10,6 @@ const CommunityCard = ({ prop }) => {
                     <h5 class={`card-title ${prop.ur? "heading-ur" : "heading-en"}`}>{prop.headingText}</h5>
                     <p class={`card-text ${prop.ur? "text-ur" : "text-en"}`}>{prop.mainText}</p>
                     <Link to={`/artical/${prop.id}`} className="btn btn-primary">READ FULL</Link>
-
                 </div>
             </div>
         </div>
