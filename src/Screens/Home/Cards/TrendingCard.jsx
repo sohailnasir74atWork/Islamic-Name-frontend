@@ -107,7 +107,8 @@ const TrendingCard = ({ cardClass }) => {
           <th>MEANINGS</th>
           <th className='urdu-cont'>معنی</th>
           <th className='support-cont'>
-            SUPPORT <i class='fa-regular fa-heart fa-solid p-3 heart-w'></i>
+            <h3>SUPPORT</h3>
+             <i class='fa-regular fa-heart fa-solid p-3 heart-w'></i>
           </th>
         </div>
         {Data.map((item) => {

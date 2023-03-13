@@ -41,3 +41,8 @@
    .w-30{
     width: 30%;
    }
+   @media (max-width: 550px) {
+    .w-30 {
+     display: none;
+     }
+    }
