@@ -5,6 +5,10 @@ import { useState } from 'react';
 import { useRef } from 'react';
 const TrendingSection = () => {
   const [activeBtnIndex, setActiveBtnIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleTab = () => {
+    setIsOpen(!isOpen);
+  }
 
   const handleButtonClick = (index) => {
     setActiveBtnIndex(index);
@@ -14,6 +18,20 @@ const TrendingSection = () => {
     <div id="trending">
       <div className='container' data-aos="fade-up">
         <h2 className='section-title-main'>SEARCH NAMES BY FEATURES</h2>
+        <div className="sticky-button-trending" onClick={toggleTab}>
+      <span>Select Filters</span>
+      <i className={`fa-solid fa-bars ${isOpen ? 'open' : ''}`}></i>
+      {isOpen && (
+        <div className="filter-tab">
+         <p>Allah's Name</p>
+         <p>Trending Name</p>
+         <p>Popular Name</p>
+         <p>New Added</p>
+         <p>Muhammad's Name</p>
+         <p></p>
+        </div>
+      )}
+    </div>
         <div className='section-container'>
           <div className='container w-30 p-0'>
             <div className='col custimize-btn-cont'>

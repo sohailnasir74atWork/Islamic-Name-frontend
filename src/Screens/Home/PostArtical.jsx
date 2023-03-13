@@ -10,10 +10,10 @@ const PostArtical = () => {
                 <form className='post-artical-form'>
                     <div class="row mt-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="First name" />
+                            <input type="text" class="form-control" placeholder="Name" />
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Last name" />
+                            <input type="text" class="form-control" placeholder="Email" />
                         </div>
                     </div>
                     <div class="row mt-3">
@@ -24,7 +24,7 @@ const PostArtical = () => {
                         </div>
                     </div>
                     <div className='m-3'>
-                    <a href="" className="btn btn-primary">READ FULL</a>
+                    <a href="" className="btn btn-primary">SUBMIT</a>
                     </div>
                 </form>
             </div>

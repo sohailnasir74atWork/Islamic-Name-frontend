@@ -44,7 +44,7 @@ const Header = () => {
         <div className='logo-container'>
           <Link to="/">
           <img src={logo} alt="logo" /></Link></div>
-          <div className='sticky-button'><i class="fa-solid fa-bars"></i></div>
+          {/* <div className='sticky-button'><i class="fa-solid fa-bars"></i></div> */}
         <div className='col mt-auto mobile-header'>
           <ul className='row'>
             <li className='col' >
