@@ -12,9 +12,9 @@ const SearchCardABC = () => {
   <div class="card-body">
   <ul className='ABC-container'>
   {alphabets.map(alphabet => (
-        <li key={alphabet}>
-          <Link to={`/alphabet/${alphabet}`}>{alphabet}</Link>
-        </li>
+       
+          <Link to={`/alphabet/${alphabet}`}> <li key={alphabet}>{alphabet}</li></Link>
+        
       ))}
 </ul>
   </div>

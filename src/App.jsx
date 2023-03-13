@@ -8,18 +8,28 @@ import {
 import Main from './Layout/Main';
 import Home from './Screens/Home/Index';
 import ByAlphabets from './Screens/ByAlphabets/Index';
+import Artical from './Screens/Artical/Index';
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Main/>,
     children:[
       {
-        path: "/",
+        path: "/trending",
         element: <Home/>,
       },
       {
+        path: "/",
+        element: <Home/>,
+      },
+      
+      {
         path: "alphabet/:id",
         element: <ByAlphabets/>,
+      },
+      {
+        path: "artical/:id",
+        element: <Artical/>,
       },
     ]
   }
