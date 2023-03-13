@@ -23,10 +23,10 @@ const data = [
 
 const PoweredbyCommunity = () => {
     return (
-        <div style={{background:"var(--color-four)"}} className="pt-6">
+        <div style={{background:"var(--color-four)"}} className="pt-6" >
         <div className='container' data-aos="fade-up">
             <div className='row d-flex '>
-                <div id="bars-stop"><h2 className='section-title-main'>IMPORTANCE OF MEANINGFUL NAME</h2></div>
+                <div><h2 className='section-title-main'>IMPORTANCE OF MEANINGFUL NAME</h2></div>
                 <div className='row m-auto d-flex justify-content-between'>
                        {data.map(item=>{return (<CommunityCard prop={item}/>)})}
                     </div>
