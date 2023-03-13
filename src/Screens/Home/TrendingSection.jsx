@@ -70,6 +70,7 @@ const TrendingSection = () => {
           <div className='trending-cards-cont'>
             <TrendingCard />
           </div>
+          <div></div>
         </div>
       </div>
     </div>
