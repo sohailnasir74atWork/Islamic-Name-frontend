@@ -19,7 +19,8 @@ const ByAlphabets = () => {
 
   return (
     <div className='container'>
-        <h2 className='section-title-main heading-by-abc' >BOYS NAMES STARTING WITH {`"${id}"`} <span className='ml-6'> 
+        <h2 className='section-title-main heading-by-abc' >BOYS NAMES STARTING WITH {`"${id}"`} 
+        <span className='ml-6'> 
         <Link to="/" class="btn btn-primary pl-3">BACK</Link></span></h2>
        
         <div></div>
