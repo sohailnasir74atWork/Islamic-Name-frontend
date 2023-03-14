@@ -79,18 +79,27 @@
     outline: 0;
     font-size: 1.2rem;
 }
-
+@media (max-width: 550px) {
+  .form-control {
+    font-size: .9rem;
+          }
+  }
   .form-control::placeholder{
     color: var(--color-one);
     font-family: var(--text-font);
     }
+    @media (max-width: 550px) {
+      .form-control::placeholder {
+        font-size: .9rem;
+              }
+      }
   .form-control:focus{
     color: var(--color-one);
     font-family: var(--text-font);
     border-color: var(--color-one);
     outline: 0;
-    font-size: 1.2rem;
-    box-shadow: 0 0 3px 0.2rem var(--color-five);
+    font-size: 1rem;
+    box-shadow: 0 0 1px 0.1rem var(--color-five);
 }
 .banner-urdu{
     position: relative;

@@ -58,7 +58,7 @@ const Data = [
   }
 ]
 
-const TrendingCard = ({ cardClass }) => {
+const TrendingCard = ({ cardClass, marginZero }) => {
   const [like, setLike] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedGender, setSelectedGender] = useState('GENDER');
@@ -80,7 +80,7 @@ const TrendingCard = ({ cardClass }) => {
   }, [selectedGender]);
 
   return (
-    <div className='trending-card'>
+    <div className={`trending-card ${marginZero}`}>
       <div>
         <div className='d-flex'>
           <th>NAMES</th>

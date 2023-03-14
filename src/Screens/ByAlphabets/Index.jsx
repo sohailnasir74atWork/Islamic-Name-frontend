@@ -21,12 +21,15 @@ const ByAlphabets = () => {
     <div className='container'>
       <div className='section-title-main heading-by-abc'>
         <h2 className='' >BOYS NAMES STARTING WITH {`"${id}"`} 
-        <span className='ml-6'> 
-        <Link to="/" class="btn btn-primary pl-3 mt-3">BACK</Link></span></h2>
+        </h2>
         <h3> <span>کے ساتھ شروع ہونے والے نام </span> {"F"}</h3>
+        
             </div>
+            <div className='d-flex mt-3 mb-3'>
+            <span> 
+        <Link to="/" class="btn btn-primary">BACK</Link></span></div>
         <div></div>
-        <TrendingCard cardClass="d-0"/>
+        <TrendingCard cardClass="d-0 m-0" marginZero="m-0"/>
     </div>
   )
 }

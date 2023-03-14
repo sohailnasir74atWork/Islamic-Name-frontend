@@ -222,6 +222,12 @@ tr {
   border-radius: 0px;
   padding: 15px 30px;
 }
+@media (max-width: 550px) {
+  .btn-primary{
+    padding: 10px 20px;
+
+   }
+  }
 .btn-primary:hover, .btn-primary:active{
   background-color: var(--color-one);
   border: var(--color-one);

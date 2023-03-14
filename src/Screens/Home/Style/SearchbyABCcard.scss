@@ -42,7 +42,8 @@ background-color: var(--color-one) !important;
 }
 @media (max-width: 550px) {
     .card-header{
-    min-height: 30px;  
+    min-height: 30px;
+    font-size: .9rem !important;  
      }
     }
 .ABC-container li:hover {
