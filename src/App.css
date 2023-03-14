@@ -130,7 +130,7 @@ th{
 }
 @media (max-width: 550px) {
   th {
-   font-size: 1rem;
+   font-size: .7rem;
    padding-left: .7rem;
   }
   }

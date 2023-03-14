@@ -130,11 +130,11 @@ const TrendingCard = ({ cardClass }) => {
               </td>
               </div>
                <div className='hide'>
-               <td>English Meaning:<br/> {item.meaning}</td>
+               <td> {item.meaning}</td>
               <td className='urdu-cont d-flex justify-content-right'>
                 <span className='span-heart-mobile'>1650 People liked</span>
                 <i
-                  className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-3 heart`}
+                  className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-1 heart`}
                   onClick={handleLikeClick}
                 ></i>
               </td>
