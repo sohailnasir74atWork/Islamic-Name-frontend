@@ -5,7 +5,7 @@ const PostArtical = () => {
     return (
 
         <div className='container post-artical-cont' data-aos="fade-up">
-            <div className='row d-flex'>
+            <div className='row d-flex container'>
                 <div className='section-title-main'>
                     <h2 >WANT TO POST ARTICAL ON NAMES? WE WILL PUBLISH IT</h2>
                     <h3>ناموں پر آرٹیکل پوسٹ کرنا چاہتے ہیں؟ ہم اسے شائع کریں گے</h3>
