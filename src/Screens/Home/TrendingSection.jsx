@@ -17,7 +17,11 @@ const TrendingSection = () => {
   return (
     <div id="trending">
       <div className='container' data-aos="fade-up">
-        <h2 className='section-title-main'>SEARCH NAMES BY FEATURES</h2>
+        <div className='section-title-main'>
+        <h2 >SEARCH NAMES BY FEATURES</h2>
+        <h3>فلٹرز کے ذریعے نام تلاش کریں
+</h3>
+        </div>
         <div className="sticky-button-trending" onClick={toggleTab}>
       <span>Select Filters</span>
       <i className={`fa-solid fa-bars ${isOpen ? 'open' : ''}`}></i>

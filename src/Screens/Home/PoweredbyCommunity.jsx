@@ -24,7 +24,11 @@ const PoweredbyCommunity = () => {
         <div style={{background:"var(--color-four)"}} className="pt-6" id="bars-stop">
         <div className='container' data-aos="fade-up">
             <div className='row d-flex '>
-                <div><h2 className='section-title-main'>IMPORTANCE OF MEANINGFUL NAME</h2></div>
+                <div>
+                <div className='section-title-main'>
+                    <h2 >IMPORTANCE OF MEANINGFUL NAME</h2>
+                    <h3 > بامعنی ناموں کی اہمیت</h3>
+                </div></div>
                 <div className='row m-auto d-flex justify-content-between'>
                        {data.map(item=>{return (<CommunityCard prop={item}/>)})}
                     </div>
