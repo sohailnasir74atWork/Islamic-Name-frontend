@@ -113,7 +113,7 @@ const TrendingCard = ({ cardClass }) => {
         </div>
         {Data.map((item) => {
           return (
-            <div className='col line-color'>
+            <div className='col line-color br-10'>
               <div className='d-flex mr-custom'>
               <td>{item.name}</td>
               <td className={`pl-0 ${cardClass}`}>{item.gender} 

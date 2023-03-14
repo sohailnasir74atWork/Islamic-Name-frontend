@@ -153,6 +153,7 @@ th{
    font-size: .7rem;
    padding-left: .7rem;
    height: 40px;
+   
 
   }
   }
@@ -170,6 +171,7 @@ td {
    font-size: .8rem;
    padding-left: .7rem;
    height: 40px;
+   border-radius: 5px;
 
    }
   }
@@ -188,6 +190,8 @@ tr {
    padding-left: .7rem;
    justify-content: center;
    height: 30px;
+   border-radius: 5px;
+
    }
   }
 .pt-6{
@@ -236,4 +240,10 @@ a{
 }
 a:hover{
   color: var(--color-two);
+}
+
+@media (max-width: 550px) {
+.br-10{
+  border-radius: 5px;
+}
 }
