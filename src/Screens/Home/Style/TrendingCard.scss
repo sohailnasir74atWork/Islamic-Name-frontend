@@ -17,7 +17,7 @@
 }
 @media (max-width: 550px) {
   .urdu-cont {
-   font-size: .7rem;
+   font-size: 1.2rem;
    }
   }
 .support-cont {
@@ -29,7 +29,7 @@
 }
 @media (max-width: 550px) {
   .support-cont {
-    font-size: 0.7rem;
+    display: none;
    }
   }
 .support-cont h3{
@@ -68,12 +68,13 @@
     }
   .gender-select {
     position: relative;
+    max-width: 50px;
   }
   
   .gender-select-header {
     display: flex;
     align-items: center;
-    padding: 8px;
+    // padding: 8px;
     // border: 1px solid gray;
     cursor: pointer;
   }
@@ -104,4 +105,45 @@
     background-color: var(--color-one);
     color: white;
   }
-  
+  .hide{
+    display: none;
+  }
+  @media (max-width: 550px) {
+    .hide {
+     display: flex;
+     opacity: .7;
+     font-size: small;
+
+    //  border: .5px solid grey;
+     }
+  }
+
+  .pl-0{
+    padding-left: 0px;
+    margin-left: -20px;
+  }
+  @media (max-width: 550px) {
+    .mobile-hide {
+     display: none;
+     }
+  }
+
+  .span-heart-mobile{
+    font-family: var(--text-font);
+    font-size: small;
+    color: #eb008b;
+  }
+  // @media (max-width: 550px) {
+  //   .span-heart-mobile {
+  //    display: none;
+  //    }
+  //   }
+  .mr-custom{
+    border-bottom: 1px solid grey;
+  }
+  @media (max-width: 550px) {
+    .mr-custom {
+     
+      margin: 0px 10px;
+     }
+    }

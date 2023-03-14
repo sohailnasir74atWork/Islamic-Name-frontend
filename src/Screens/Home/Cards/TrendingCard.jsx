@@ -84,7 +84,7 @@ const TrendingCard = ({ cardClass }) => {
       <div>
         <div className='d-flex'>
           <th>NAMES</th>
-          <th className={cardClass}>
+          <th className={`pl-0 ${cardClass}`}>
             <div className='gender-select'>
               <div
                 className='gender-select-header'
@@ -104,7 +104,7 @@ const TrendingCard = ({ cardClass }) => {
               )}
             </div>
           </th>
-          <th>MEANINGS</th>
+          <th className='mobile-hide'>MEANINGS</th>
           <th className='urdu-cont'>معنی</th>
           <th className='support-cont'>
             <h3>SUPPORT</h3>
@@ -113,18 +113,32 @@ const TrendingCard = ({ cardClass }) => {
         </div>
         {Data.map((item) => {
           return (
-            <div className='d-flex line-color'>
+            <div className='col line-color'>
+              <div className='d-flex mr-custom'>
               <td>{item.name}</td>
-              <td className={cardClass}>{item.gender}</td>
-              <td>{item.meaning}</td>
+              <td className={`pl-0 ${cardClass}`}>{item.gender} 
+              {/* <i className='fa-solid fa-chevron-down p-2 hide'></i> */}
+              </td>
+              <td className='mobile-hide'>{item.meaning}</td>
               <td className='urdu-cont'>{item.urdu}</td>
-              <td className='urdu-cont'>
+              <td className='urdu-cont mobile-hide'>
                 <span className='span-heart'>1650 People liked</span>
                 <i
                   className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-3 heart`}
                   onClick={handleLikeClick}
                 ></i>
               </td>
+              </div>
+               <div className='hide'>
+               <td>English Meaning:<br/> {item.meaning}</td>
+              <td className='urdu-cont d-flex justify-content-right'>
+                <span className='span-heart-mobile'>1650 People liked</span>
+                <i
+                  className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-3 heart`}
+                  onClick={handleLikeClick}
+                ></i>
+              </td>
+              </div>
             </div>
           );
         })}
