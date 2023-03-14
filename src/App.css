@@ -167,7 +167,7 @@ td {
 }
 @media (max-width: 550px) {
   td {
-   font-size: 1rem;
+   font-size: .8rem;
    padding-left: .7rem;
    height: 40px;
 
