@@ -19,10 +19,12 @@ const ByAlphabets = () => {
 
   return (
     <div className='container'>
-        <h2 className='section-title-main heading-by-abc' >BOYS NAMES STARTING WITH {`"${id}"`} 
+      <div className='section-title-main heading-by-abc'>
+        <h2 className='' >BOYS NAMES STARTING WITH {`"${id}"`} 
         <span className='ml-6'> 
-        <Link to="/" class="btn btn-primary pl-3">BACK</Link></span></h2>
-       
+        <Link to="/" class="btn btn-primary pl-3 mt-3">BACK</Link></span></h2>
+        <h3> <span>کے ساتھ شروع ہونے والے نام </span> {"F"}</h3>
+            </div>
         <div></div>
         <TrendingCard cardClass="d-0"/>
     </div>
