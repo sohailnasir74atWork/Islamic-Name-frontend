@@ -40,7 +40,11 @@ background-color: var(--color-one) !important;
     justify-content: center;
     align-items: center;
 }
-
+@media (max-width: 550px) {
+    .card-header{
+    min-height: 30px;  
+     }
+    }
 .ABC-container li:hover {
         background: white;
         color: var(--color-one);
@@ -58,3 +62,8 @@ background-color: var(--color-one) !important;
       
          }
     }
+    @media (max-width: 550px) {
+        .card-body{
+       padding: 5px;  
+         }
+        }

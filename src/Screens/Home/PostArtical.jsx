@@ -3,13 +3,15 @@ import "./Style/PostArtical.scss"
 
 const PostArtical = () => {
     return (
-
-        <div className='container post-artical-cont' data-aos="fade-up">
+        <div className='container'>
+        <div className='post-artical-cont' data-aos="fade-up">
             <div className='row d-flex container'>
                 <div className='section-title-main'>
                     <h2 >WANT TO POST ARTICAL ON NAMES? WE WILL PUBLISH IT</h2>
                     <h3>ناموں پر آرٹیکل پوسٹ کرنا چاہتے ہیں؟ ہم اسے شائع کریں گے</h3>
                 </div>
+                </div>
+                <div>
                 <form className='post-artical-form'>
                     <div class="row mt-3">
                         <div class="col">
@@ -30,9 +32,10 @@ const PostArtical = () => {
                     <a href="" className="btn btn-primary">SUBMIT</a>
                     </div>
                 </form>
+                
             </div>
         </div>
-
+        </div>
     )
 }
 

@@ -106,17 +106,20 @@ display: flex;
 
 @media (max-width: 550px) {
   .section-title-main{
-    margin: 80px 0px 10px;
+    margin: 0px 0px;
+    border-left: .5rem solid var(--color-one);
     padding:0rem 0rem 0rem 1rem;}
   }
   @media (max-width: 550px) {
     .section-title-main h2{
-      font-size: 2rem;}
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+}
     }
     @media (max-width: 550px) {
       .section-title-main h3{
-        font-size: 1rem;
-        line-height: 2rem;}
+        font-size: .8rem;
+        line-height: 1.2rem;}
       }
 .section-title{
   display: flex;
@@ -149,6 +152,8 @@ th{
   th {
    font-size: .7rem;
    padding-left: .7rem;
+   height: 40px;
+
   }
   }
 td {
@@ -164,6 +169,8 @@ td {
   td {
    font-size: 1rem;
    padding-left: .7rem;
+   height: 40px;
+
    }
   }
 tr {
@@ -180,6 +187,7 @@ tr {
    font-size: 1rem;
    padding-left: .7rem;
    justify-content: center;
+   height: 30px;
    }
   }
 .pt-6{
