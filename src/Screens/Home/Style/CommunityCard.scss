@@ -52,8 +52,21 @@
     padding:10px 0px;
 }
 .text-ur{
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: right;
     font-family: var(--urdu-font);
     padding:10px 0px;
+    line-height: 2.5rem;
 }
+@media (max-width: 550px) {
+    .text-ur{
+        font-size: .8rem;
+  
+     }
+    }
+    @media (max-width: 550px) {
+        .heading-ur{
+            font-size: 1.2rem;
+      
+         }
+        }
