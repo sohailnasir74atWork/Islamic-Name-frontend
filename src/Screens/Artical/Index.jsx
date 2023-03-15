@@ -26,9 +26,12 @@ const Artical = () => {
   return (
     <div className='container pt-6'>
       {<div>
-        <div className={`section-title-main mb-3  ${foundElement.ur? "heading-ar-ur" : "heading-ar-en"}`}>
-        <h2 >{foundElement.headingText} <span className='ml-6'> 
-        <Link to="/" class="btn btn-primary pl-3 mt-3">BACK</Link></span> </h2></div>
+        <div className={`section-title-main mb-3  ${foundElement.ur? "heading-ar-ur mr-m" : "heading-ar-en"}`}>
+        <h2 className={`${foundElement.ur ? "heading-ar-ur" : ""}`}
+>{foundElement.headingText}  </h2>
+        </div>
+        <div className={`d-flex ${foundElement.ur? "justify-content-end" : ""}`}><span className=''> 
+        <Link to="/" class={`btn btn-primary mt-3 mr-m`}>BACK</Link></span></div>
         <div><p class={`${foundElement.ur? "text-ar-ur" : "text-ar-en"}`}>{foundElement.mainText}</p></div>
       </div>
       }

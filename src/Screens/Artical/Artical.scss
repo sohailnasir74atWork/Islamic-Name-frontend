@@ -21,6 +21,15 @@ line-height: 3rem;
     line-height: 3rem;
 
 }
+@media (max-width: 550px) {
+    .text-ar-ur{
+        font-size: .9rem;
+        padding: 15px;
+        line-height: 2rem;
+        text-align: right;
+  
+     }
+    }
 .heading-ar-en {
     font-size: 3rem;
 }
@@ -32,8 +41,8 @@ line-height: 3rem;
      }
     }
 .heading-ar-ur {
-    font-size: 2rem;
-    font-family: var(--urdu-font);
+    font-size: 1.7rem !important;
+    font-family: var(--urdu-font) !important;
     text-align: right;
     display: flex;
     justify-content: right;
@@ -41,8 +50,15 @@ line-height: 3rem;
 }
 @media (max-width: 550px) {
     .heading-ar-ur{
-        font-size: 1.2rem;
+        font-size: 1rem !important;
         line-height: 3rem;
   
      }
     }
+@media (max-width: 550px) {
+        .mr-m{
+            margin-left: 10px;
+            margin-right: 10px;
+      
+         }
+        }
