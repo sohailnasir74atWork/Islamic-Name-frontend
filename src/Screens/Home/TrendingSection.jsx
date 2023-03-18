@@ -3,6 +3,7 @@ import TrendingCard from './Cards/TrendingCard'
 import "./Style/TrendingSection.scss"
 import { useState } from 'react';
 import { useRef } from 'react';
+import ExtractData from '../../Common/DataExtracter';
 const TrendingSection = () => {
   const [activeBtnIndex, setActiveBtnIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
+import ExtractData from '../../Common/DataExtracter'
 import "./Artical.scss"
 
 
@@ -35,7 +36,7 @@ const Artical = () => {
         <div><p class={`${foundElement.ur? "text-ar-ur" : "text-ar-en"}`}>{foundElement.mainText}</p></div>
       </div>
       }
-    </div>
+        </div>
   )
 }
 
