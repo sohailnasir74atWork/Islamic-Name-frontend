@@ -58,7 +58,7 @@ const Data = [
   }
 ]
 
-const TrendingCard = ({ cardClass, marginZero }) => {
+const TrendingCard = ({ cardClass, marginZero, data }) => {
   const [like, setLike] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedGender, setSelectedGender] = useState('GENDER');

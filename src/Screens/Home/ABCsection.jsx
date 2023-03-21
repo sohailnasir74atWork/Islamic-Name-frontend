@@ -12,8 +12,8 @@ const ABCsection = () => {
       </div>
         <div className='row'>
             <div className='col cards-container'>
-              <div> <SearchCardABC/></div>
-              <div> <SearchCardABC/></div>
+              <div> <SearchCardABC gender="BOYS"/></div>
+              <div> <SearchCardABC gender="GIRLS"/></div>
               </div>
          </div>
     </div>

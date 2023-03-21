@@ -7,8 +7,10 @@ import {
 } from "react-router-dom";
 import Main from './Layout/Main';
 import Home from './Screens/Home/Index';
-import ByAlphabets from './Screens/ByAlphabets/Index';
 import Artical from './Screens/Artical/Index';
+import BoysABC from './Screens/ByAlphabets/BoysABC';
+import GirlsABC from './Screens/ByAlphabets/GirlsABC.jsx';
+import Test from './Test';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,8 +26,12 @@ const router = createBrowserRouter([
       },
       
       {
-        path: "alphabet/:id",
-        element: <ByAlphabets/>,
+        path: "boys/alphabet/:id",
+        element: <BoysABC/>,
+      },
+      {
+        path: "girls/alphabet/:id",
+        element: <GirlsABC/>,
       },
       {
         path: "artical/:id",

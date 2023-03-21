@@ -4,3 +4,14 @@
 .d-0{
     display: none;
 }
+.page-link.active, .active > .page-link {
+    z-index: 3;
+    color: var(--color-three);
+    background-color: var(--color-one);
+    border-color: grey;
+  }
+  .btn-cont{
+    max-height: 50px;
+    font-size: .8rem;
+
+  }

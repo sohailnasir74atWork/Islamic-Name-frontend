@@ -253,3 +253,28 @@ a:hover{
   /* border-radius: 5px; */
 }
 }
+
+
+.space-between{
+  justify-content: space-between;
+  margin-top: 100px;
+  padding-top: 20px;
+}
+
+.spinner-border-custom {
+  --bs-spinner-width: 5rem;
+  --bs-spinner-height: 5rem;
+  --bs-spinner-vertical-align: -0.125em;
+  --bs-spinner-border-width: 0.25em;
+  --bs-spinner-animation-speed: 0.8s;
+  --bs-spinner-animation-name: spinner-border;
+  border: .5rem solid var(--color-one);
+  border-right-color: transparent;
+
+}
+
+.tac{
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+  }
