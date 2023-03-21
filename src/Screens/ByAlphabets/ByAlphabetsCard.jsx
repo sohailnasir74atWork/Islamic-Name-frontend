@@ -28,54 +28,64 @@ const ByAlphabetsCard = ({ cardClass, marginZero, data, totalPages, currentPage,
   };
   
   
-  const pagesToShow = 3;
+  const pagesToShow = 2;
 const range = Math.floor(pagesToShow / 2);
  
   return (
     <div className={`trending-card ${marginZero}`}>
       <div>
+      {/* ///////////////////////////////destopview///////////////////////*/}
         <div className='d-flex'>
-          <th className='col-1'>NAMES</th>
-          <th className='urdu-cont col-1'>نام</th>
-          <th className='urdu-cont col-3'>اردو معنی</th>
+          <th className='mobile-hide col-1'>NAMES</th>
+          <th className='mobile-hide urdu-cont col-1'>نام</th>
+          <th className='urdu-cont mobile-hide col-3'>اردو معنی</th>
           <th className='mobile-hide col-5'>MEANINGS</th>
-          
-          <th className='support-cont col-2'>
+          <th className='mobile-hide support-cont col-2'>
             <h3>SUPPORT</h3>
             <i className='fa-regular fa-heart fa-solid p-3 heart-w'></i>
           </th>
+        {/* ///////////////////////////////Mobileview///////////////////// */}
+        <div className='d-flex container p-0'>
+        <th className='hide col-4'>NAMES</th>
+          <th className='hide urdu-cont col-4'>نام</th>
+          <th className='hide urdu-cont col-4'>اردو معنی</th>
+          </div>
         </div>
         {data.map((item, index) => {
           return (
             <div className='col line-color br-10'>
+        {/* /////////////////////////////destopview////////////// */}
               <div className='d-flex mr-custom'>
-                <td className='col-1'>{item.name}</td>
-                
-                <td className='urdu-cont col-1'>{item.urduName}</td>
+                <td className='mobile-hide col-1'>{item.name}</td>
+                <td className='mobile-hide urdu-cont col-1'>{item.urduName}</td>
                 <td className='mobile-hide col-3 tac'><button className='btn btn-primary btn-cont' onClick={()=>handleUrduClick(index)}>Check Urdu Meaning</button></td>
                 <td className='mobile-hide col-5'>{item.englishMeaning}</td>
-                
-                
-                <td className='urdu-cont mobile-hide col-2'>
-                  <span className='span-heart'>1650 People liked</span>
-                  <i
-                    className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-3 heart`}
+               <td className='mobile-hide urdu-cont col-2'>
+              <span className='span-heart'>1650 People liked</span>
+                <i className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-3 heart`}
                     onClick={handleLikeClick}
                   ></i>
                 </td>
               </div>
-
-              {show [index]&& <span> {<Translate text={item.englishMeaning}/>}</span>}
+            {/* /////////////////////////////////mobileview///////////////// */}
               <div className='hide'>
-                <td>{item.meaning}</td>
-                <td className='urdu-cont d-flex justify-content-right'>
-                  <span className='span-heart-mobile'>1650 People liked</span>
-                  <i
-                    className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-1 heart`}
+                <td>{item.name}</td>
+                <td className='hide urdu-cont col-1'>{item.urduName}</td>
+                <td className='urdu-cont d-flex justify-content-end'>
+                <button className='btn btn-primary btn-cont' onClick={()=>handleUrduClick(index)}>Check Details</button>
+                </td>
+              </div>
+              {show [index]&&<> <span> {<Translate text={item.englishMeaning}/>}</span>
+              <span style={{fontFamily:"var(--text-font)", fontSize:".7rem"}}>English Meaning: {item.englishMeaning}</span>
+              <td className='hide urdu-cont col'>
+              <span className='span-heart'>1650 People liked</span>
+                <i className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-3 heart`}
                     onClick={handleLikeClick}
                   ></i>
                 </td>
-              </div>
+              </>
+              }
+
             </div>
           );
         })}
@@ -113,7 +123,11 @@ const range = Math.floor(pagesToShow / 2);
           <span className="sr-only">Next</span>
         </a>
       </li>
-      <li className="page-item">
+      
+    
+    </ul>
+    <ul className='tac p-0'>
+    <li className="page-item" >
         <span className="page-link">
           Page {currentPage} of {totalPages}
         </span>

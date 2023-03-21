@@ -272,6 +272,19 @@ a:hover{
   border-right-color: transparent;
 
 }
+@media (max-width: 550px) {
+  .spinner-border-custom {
+    --bs-spinner-width: 1rem;
+    --bs-spinner-height: 1rem;
+    --bs-spinner-vertical-align: -0.125em;
+    --bs-spinner-border-width: 0.25em;
+    --bs-spinner-animation-speed: 0.8s;
+    --bs-spinner-animation-name: spinner-border;
+    border: .2rem solid var(--color-one);
+    border-right-color: transparent;
+  
+  }
+  }
 
 .tac{
       text-align: center;

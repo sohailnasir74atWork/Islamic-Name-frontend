@@ -63,7 +63,7 @@
   }
   @media (max-width: 550px) {
     .span-heart {
-     display: none;
+    //  display: none;
      }
     }
   .gender-select {
@@ -115,7 +115,6 @@
     .hide {
      display: flex;
      opacity: .7;
-     margin: 0px 10px;
 
     //  border: .5px solid grey;
      }
@@ -154,5 +153,7 @@
     .mr-custom {
      
       margin: 0px 10px;
+      border-bottom: 0px solid grey;
+
      }
     }
