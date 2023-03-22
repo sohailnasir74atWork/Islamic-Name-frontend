@@ -21,7 +21,7 @@ const BoysABC = () => {
 
   const getData = async (id, currentPage) => {
     try {
-      const response = await axios.get(`http://localhost:5000/names/boys?id=${id}&page=${currentPage}`);
+      const response = await axios.get(`/names/boys?id=${id}&page=${currentPage}`);
       const data = response.data.allNames;
 
       setNewData(data)
