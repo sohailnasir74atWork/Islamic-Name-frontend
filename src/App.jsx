@@ -26,15 +26,15 @@ const router = createBrowserRouter([
       },
       
       {
-        path: "boys/alphabet/:id",
+        path: "/boys/alphabet/:id",
         element: <BoysABC/>,
       },
       {
-        path: "girls/alphabet/:id",
+        path: "/girls/alphabet/:id",
         element: <GirlsABC/>,
       },
       {
-        path: "artical/:id",
+        path: "/artical/:id",
         element: <Artical/>,
       },
     ]

@@ -23,7 +23,7 @@ const BoysABC = () => {
     try {
       const response = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/boys?id=${id}&page=${currentPage}`);
       const data = response.data.allNames;
-
+      console.log(process.env.REACT_APP_URL_SERVER)
       setNewData(data)
       setLoading(false)
       setTotalPages(response.data.totalPages)
