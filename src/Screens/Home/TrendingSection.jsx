@@ -14,7 +14,7 @@ const TrendingSection = () => {
   const [quranicBoys, setQuranicBoys] = useState([]);
   const [allah, setAllah] = useState([]);
   const [muhammad, setMuhammad] = useState([]);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [isOpen, setIsOpen] = useState(false);
   const toggleTab = () => {
     setIsOpen(!isOpen);
@@ -135,7 +135,12 @@ const TrendingSection = () => {
             </div>
           </div>
           <div className='trending-cards-cont'>
-          <TrendingCardHome 
+            {loading && (<div class="d-flex justify-content-center m-auto">
+  <div class="spinner-border spinner-border-custom" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>)}
+          {!loading && <TrendingCardHome 
   data={activeBtnIndex === 0 ? trendingBoys : 
         activeBtnIndex === 1 ? trendingGirls :
         activeBtnIndex === 2 ? quranicBoys :
@@ -144,7 +149,7 @@ const TrendingSection = () => {
         activeBtnIndex === 5 ? muhammad :
         null
   }
-/>
+/>}
 
           </div>
           <div></div>
