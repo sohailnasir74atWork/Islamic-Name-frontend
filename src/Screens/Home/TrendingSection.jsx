@@ -31,6 +31,7 @@ const TrendingSection = () => {
       const response1 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/boys`);
       const quranicBoys = response1.data;
       setQuranicBoys(quranicBoys)
+      setLoading(false)
       ////////////////////call-2////////////////////////////////////////////
       const response2 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/girls`);
       const quranicGirls = response2.data;
@@ -51,7 +52,6 @@ const TrendingSection = () => {
       const response6 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/muhammad`);
       const muhammad = response6.data;
       setMuhammad(muhammad)
-      setLoading(false)
     } catch (error) {
       console.log(error)
     }
