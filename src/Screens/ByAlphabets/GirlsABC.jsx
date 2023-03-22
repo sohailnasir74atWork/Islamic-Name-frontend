@@ -21,7 +21,7 @@ const GirlsABC = () => {
 
   const getData = async (id, currentPage) => {
     try {
-      const response = await axios.get(`http://localhost:5000/names/girls?id=${id}&page=${currentPage}`);
+      const response = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/girls?id=${id}&page=${currentPage}`);
       const data = response.data.allNames;
 
       setNewData(data)
@@ -54,7 +54,7 @@ const GirlsABC = () => {
       </div>
       <div></div>
       {loading && (<div class="d-flex justify-content-center">
-  <div class="spinner-border" role="status">
+  <div class="spinner-border spinner-border-custom" role="status">
     <span class="sr-only">Loading...</span>
   </div>
 </div>)}

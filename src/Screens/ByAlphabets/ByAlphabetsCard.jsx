@@ -76,7 +76,7 @@ const range = Math.floor(pagesToShow / 2);
                 </td>
               </div>
               {show [index]&&<> <span> {<Translate text={item.englishMeaning}/>}</span>
-              <span style={{fontFamily:"var(--text-font)", fontSize:".7rem"}}>English Meaning: {item.englishMeaning}</span>
+              <span className='hide tac m-1' style={{fontFamily:"var(--text-font)", fontSize:".7rem"}}>English Meaning: {item.englishMeaning}</span>
               <td className='hide urdu-cont col'>
               <span className='span-heart'>1650 People liked</span>
                 <i className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-3 heart`}
