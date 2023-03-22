@@ -3,14 +3,15 @@ import Translate from '../../../Common/Translat';
 import "../Style/TrendingCard.scss"
 
 const TrendingCardHome = ({ marginZero, data }) => {
-  const [like, setLike] = useState(0);
+  const [like, setLike] = useState(Array(data.length).fill(false));
   const [show, setShow] = useState(Array(data.length).fill(false));
-  const [clickedIndex, setClickedIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
 
 
-  const handleLikeClick = () => {
-    setLike(like === 0 ? 1 : 0);
+  const handleLikeClick = (index) => {
+    setActiveIndex(index);
+
   };
   const handleUrduClick = (index) => {
     setShow((prevShow) => {
@@ -62,8 +63,8 @@ const range = Math.floor(pagesToShow / 2);
                 <td className='mobile-hide col-4'>{item.englishMeaning}</td>
                <td className='mobile-hide urdu-cont col-2 p-0'>
               <span className='span-heart'>1650 People liked</span>
-                <i className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-2 heart`}
-                    onClick={handleLikeClick}
+                <i className={`fa-regular fa-heart${index === activeIndex ? ' fa-solid' : ''} p-2 heart`}
+                    onClick={()=>{handleLikeClick(index)}}
                   ></i>
                 </td>
               </div>
@@ -79,8 +80,8 @@ const range = Math.floor(pagesToShow / 2);
               <span className='hide tac m-1' style={{fontFamily:"var(--text-font)", fontSize:".7rem"}}>English Meaning: {item.englishMeaning}</span>
               <td className='hide urdu-cont col'>
               <span className='span-heart'>1650 People liked</span>
-                <i className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-2 heart`}
-                    onClick={handleLikeClick}
+                <i className={`fa-regular fa-heart${index === activeIndex ? ' fa-solid' : ''} p-2 heart`}
+                    onClick={()=>{handleLikeClick(index)}}
                   ></i>
                 </td>
               </>
