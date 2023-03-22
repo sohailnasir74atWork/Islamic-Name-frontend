@@ -49,25 +49,21 @@ const Header = () => {
           <ul className='row'>
             <li className='col' >
               <Link to="/trending" onClick={handleClick}>
-              Allah's Name</Link>
+              Trending Names</Link>
             </li>
             <li className='col'>
             <Link to="/trending" onClick={handleClick}>
-              Trending Name</Link>
+              Quranic Names</Link>
             </li >
             <li className='col'> 
             <Link to="/trending" onClick={handleClick}>
-            New Added</Link>
+            Allah's Names</Link>
           </li>
             <li className='col' >
             <Link to="/trending" onClick={handleClick}>
-            Polular Name</Link>
+            Muhammad's Names</Link>
             </li>
-            <li className='col' >
-            <Link to="/trending" onClick={handleClick}>
-            Quranic Name</Link>
-            </li>
-            <li className='col'>
+           <li className='col col-md-2'>
             <div className="form-check form-switch mt-auto d-flex justify-content-end">
               <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
               <span className='dark-mode'>Dark</span>
