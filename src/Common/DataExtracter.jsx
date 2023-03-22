@@ -11,8 +11,9 @@ function ExtractData() {
     const allNames = [];
 
     // Loop through all pages and accumulate data in an array
-    for (let i = 1; i <= 428; i++) {
-      const response = await fetch(`https://hamariweb.com/names/muslim/boy/page-${i}`);
+    // for (let i = 1; i <= 428; i++) {
+    //   const response = await fetch(`https://hamariweb.com/names/muslim/boy/page-${i}`);
+    const response = await fetch(`https://www.urdupoint.com/names/quranic-girl-names.html`);
       const html = await response.text();
   
       // Use Cheerio to extract data from the HTML
@@ -21,14 +22,14 @@ function ExtractData() {
   
       // Loop through each name row and extract the name and meaning
       $('tr').each((i, el) => {
-        const name = $(el).find('td:first-child a').text().trim();
-        const englishMeaning = $(el).find('td:nth-child(2)').text().trim();
-        const urduName = $(el).find('td:nth-child(3) span').text().trim();
+        const name = $(el).find('a').text();
+        const englishMeaning = $(el).find('td:nth-child(2)').text();
+        const urduName = $(el).find('div:nth-child(4)').text();
     
         // Do something with name, englishMeaning
         allNames.push({ name, englishMeaning, urduName });
       });
-    }
+    
 
     // Set the state with the accumulated data
     setNames(allNames);

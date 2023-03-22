@@ -143,7 +143,7 @@ th{
   text-align: left;
   display: flex;
   padding-left: 1rem;
-  height: 60px;
+  min-height: 60px;
   align-items: center;
   font-family: var(--text-font);
   color: var(--color-three);
@@ -152,7 +152,7 @@ th{
   th {
    font-size: .7rem;
    padding-left: .7rem;
-   height: 40px;
+   min-height: 40px;
    
 
   }
@@ -161,7 +161,7 @@ td {
   text-align: left;
   width: 100%;
   padding-left: 1rem;
-  height: 60px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   font-family: var(--text-font);
@@ -170,7 +170,7 @@ td {
   td {
    font-size: .8rem;
    padding-left: .7rem;
-   height: 40px;
+   min-height: 40px;
    border-radius: 5px;
 
    }
@@ -179,7 +179,7 @@ tr {
   text-align: left;
   width: 100%;
   padding-left: 1rem;
-  height: 50px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   font-family: var(--text-font);
@@ -189,7 +189,7 @@ tr {
    font-size: 1rem;
    padding-left: .7rem;
    justify-content: center;
-   height: 30px;
+   min-height: 30px;
    border-radius: 5px;
 
    }

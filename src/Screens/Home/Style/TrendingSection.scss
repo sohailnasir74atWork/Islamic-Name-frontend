@@ -113,7 +113,7 @@
     padding: 10px;
     color: var(--color-one);
   }
-  .filter-tab p:hover {
+  .filter-tab p:hover, .filter-tab p:focus, .filter-tab p:active {
     background-color: var(--color-one);
     color: white;
   }

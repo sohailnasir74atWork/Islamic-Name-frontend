@@ -12,13 +12,13 @@ const BoysABC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
 
-  
   const {id} = useParams()
-
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
-
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
   const getData = async (id, currentPage) => {
     try {
       const response = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/boys?id=${id}&page=${currentPage}`);
@@ -32,10 +32,6 @@ const BoysABC = () => {
       console.log(error)
     }
   }
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
-
   useEffect(() => {
     scrollToTop();
     getData(id, currentPage);

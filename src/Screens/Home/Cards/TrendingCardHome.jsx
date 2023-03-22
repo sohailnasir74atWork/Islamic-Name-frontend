@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Translate from '../../Common/Translat';
-import "../Home/Style/TrendingCard.scss"
+import Translate from '../../../Common/Translat';
+import "../Style/TrendingCard.scss"
 
-const ByAlphabetsCard = ({ marginZero, data, totalPages, currentPage, onPageChange }) => {
+const TrendingCardHome = ({ marginZero, data }) => {
   const [like, setLike] = useState(0);
   const [show, setShow] = useState(Array(data.length).fill(false));
   const [clickedIndex, setClickedIndex] = useState(null);
@@ -36,13 +36,13 @@ const range = Math.floor(pagesToShow / 2);
       <div>
       {/* ///////////////////////////////destopview///////////////////////*/}
         <div className='d-flex'>
-          <th className='mobile-hide col-1'>NAMES</th>
+          <th className='mobile-hide col-2'>NAMES</th>
           <th className='mobile-hide urdu-cont col-1'>نام</th>
           <th className='urdu-cont mobile-hide col-3'>اردو معنی</th>
-          <th className='mobile-hide col-5'>MEANINGS</th>
-          <th className='mobile-hide support-cont col-2'>
+          <th className='mobile-hide col-4'>MEANINGS</th>
+          <th className='mobile-hide support-cont col-2 p-0'>
             <h3>SUPPORT</h3>
-            <i className='fa-regular fa-heart fa-solid p-3 heart-w'></i>
+            <i className='fa-regular fa-heart fa-solid p-2 heart-w'></i>
           </th>
         {/* ///////////////////////////////Mobileview///////////////////// */}
         <div className='d-flex container p-0'>
@@ -56,13 +56,13 @@ const range = Math.floor(pagesToShow / 2);
             <div className='col line-color br-10'>
         {/* /////////////////////////////destopview////////////// */}
               <div className='d-flex mr-custom'>
-                <td className='mobile-hide col-1'>{item.name}</td>
+                <td className='mobile-hide col-2'>{item.name}</td>
                 <td className='mobile-hide urdu-cont col-1'>{item.urduName}</td>
                 <td className='mobile-hide col-3 tac'><button className='btn btn-primary btn-cont' onClick={()=>handleUrduClick(index)}>Check Urdu Meaning</button></td>
-                <td className='mobile-hide col-5'>{item.englishMeaning}</td>
-               <td className='mobile-hide urdu-cont col-2'>
+                <td className='mobile-hide col-4'>{item.englishMeaning}</td>
+               <td className='mobile-hide urdu-cont col-2 p-0'>
               <span className='span-heart'>1650 People liked</span>
-                <i className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-3 heart`}
+                <i className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-2 heart`}
                     onClick={handleLikeClick}
                   ></i>
                 </td>
@@ -79,7 +79,7 @@ const range = Math.floor(pagesToShow / 2);
               <span className='hide tac m-1' style={{fontFamily:"var(--text-font)", fontSize:".7rem"}}>English Meaning: {item.englishMeaning}</span>
               <td className='hide urdu-cont col'>
               <span className='span-heart'>1650 People liked</span>
-                <i className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-3 heart`}
+                <i className={`fa-regular fa-heart${like === 1 ? ' fa-solid' : ''} p-2 heart`}
                     onClick={handleLikeClick}
                   ></i>
                 </td>
@@ -89,7 +89,7 @@ const range = Math.floor(pagesToShow / 2);
             </div>
           );
         })}
-      <div className='pagination-container'>
+      {/* <div className='pagination-container'>
   <nav aria-label="Page navigation example">
     <ul className="pagination">
       <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
@@ -134,11 +134,11 @@ const range = Math.floor(pagesToShow / 2);
       </li>
     </ul>
   </nav>
-</div>
+</div> */}
 
       </div>
     </div>
   );
 }
 
-export default ByAlphabetsCard
+export default TrendingCardHome
