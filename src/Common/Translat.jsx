@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-const Translate = ({ text }) => {
+const Translate = ({ text, bg="var(--color-five)" , cl="var(--color-three)"}, ca="justify-content-center") => {
   const [urdu, setUrdu] = useState("");
   const [loading, setLoading] = useState(true)
   useEffect(() => {
@@ -25,12 +25,12 @@ const Translate = ({ text }) => {
 
   return (
     <div>
-      {loading && (<div class="d-flex justify-content-center tac" style={{minHeight:"50px"}}>
+      {loading && (<div class={`d-flex ${ca}  tac`} style={{minHeight:"50px"}}>
   <div class="spinner-border" role="status">
     <span class="sr-only">Loading...</span>
   </div>
 </div>)}
-      {!loading  && <div className='urdu-cont d-flex  tac' style={{minHeight:"50px", background:"var(--color-five)", color:"white"}}>{urdu}</div>}
+      {!loading  && <div className='urdu-cont d-flex  tac' style={{minHeight:"50px", background:bg, color:cl}}>{urdu}</div>}
     </div>
   );
 };

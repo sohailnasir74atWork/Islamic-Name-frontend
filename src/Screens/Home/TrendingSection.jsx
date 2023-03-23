@@ -27,19 +27,19 @@ const TrendingSection = () => {
   const getData = async (id, currentPage) => {
 
     try {
-      ////////////////////call-1////////////////////////////////////////////
-      const response1 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/boys`);
-      const quranicBoys = response1.data;
-      setQuranicBoys(quranicBoys)
+      ////////////////////call-3////////////////////////////////////////////
+      const response3 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/boys`);
+      const trendingBoys = response3.data;
+      setTrendingBoys(trendingBoys)
       setLoading(false)
       ////////////////////call-2////////////////////////////////////////////
       const response2 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/girls`);
       const quranicGirls = response2.data;
       setQuranicGirls(quranicGirls)
-      ////////////////////call-3////////////////////////////////////////////
-      const response3 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/boys`);
-      const trendingBoys = response3.data;
-      setTrendingBoys(trendingBoys)
+      ////////////////////call-1////////////////////////////////////////////
+      const response1 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/boys`);
+      const quranicBoys = response1.data;
+      setQuranicBoys(quranicBoys)
       ////////////////////call-4////////////////////////////////////////////
       const response4 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/girls`);
       const trendingGirls = response4.data;
