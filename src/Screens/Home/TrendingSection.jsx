@@ -16,49 +16,97 @@ const TrendingSection = () => {
   const [muhammad, setMuhammad] = useState([]);
   const [loading, setLoading] = useState(true)
   const [isOpen, setIsOpen] = useState(false);
+  const [totalPagesTrendingBoys, setTotalPagesTrendingBoys] = useState(0);
+  const [totalPagesTrendingGirls, setTotalPagesTrendingGirls] = useState(0);
+  const [totalPagesQuranicBoys, setTotalPagesQuranicBoys] = useState(0);
+  const [totalPagesQuranicGirls, setTotalPagesQuranicGirls] = useState(0);
+  const [totalPagesAllah, setTotalPagesAllah] = useState(0);
+  const [totalPagesMuhammad, setTotalPagesMuhammad] = useState(0);
+  const [currentTrendingBoys, setCurrentTrendingBoys] = useState(1);
+  const [currentTrendingGirls, setCurrentTrendingGirls] = useState(1);
+  const [currentQuranicBoys, setCurrentQuranicBoys] = useState(1);
+  const [currentQuranicGirls, setCurrentQuranicGirls] = useState(1);
+  const [currentAllah, setCurrentAllah] = useState(1);
+  const [currentMuhammad, setCurrentMuhammad] = useState(1);
   const toggleTab = () => {
     setIsOpen(!isOpen);
   }
+  const handlePageChange = (pageNumber) => {
+    setLoading(true)
 
+    if (activeBtnIndex === 0) {
+      setCurrentTrendingBoys(pageNumber);
+    } else if (activeBtnIndex === 1) {
+      setCurrentTrendingGirls(pageNumber);
+    } else if (activeBtnIndex === 2) {
+      setCurrentQuranicBoys(pageNumber);
+    } else if (activeBtnIndex === 3) {
+      setCurrentQuranicGirls(pageNumber);
+    } else if (activeBtnIndex === 4) {
+      setCurrentAllah(pageNumber);
+    } else if (activeBtnIndex === 5) {
+      setCurrentMuhammad(pageNumber);
+    }
+  };
+  console.log(currentTrendingBoys)
   const handleButtonClick = (index) => {
     setActiveBtnIndex(index);
   };
   //////////////////////////////api call///////////////////////
-  const getData = async (id, currentPage) => {
+  const getData = async () => {
 
     try {
-      ////////////////////call-3////////////////////////////////////////////
-      const response3 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/boys`);
-      const trendingBoys = response3.data;
+      ////////////////////call-1////////////////////////////////////////////
+      const response3 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/boys?page=${currentTrendingBoys}`);
+      const trendingBoys = response3.data.allNames;
       setTrendingBoys(trendingBoys)
+      setTotalPagesTrendingBoys(response3.data.totalPages)
       setLoading(false)
       ////////////////////call-2////////////////////////////////////////////
-      const response2 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/girls`);
-      const quranicGirls = response2.data;
-      setQuranicGirls(quranicGirls)
-      ////////////////////call-1////////////////////////////////////////////
-      const response1 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/boys`);
-      const quranicBoys = response1.data;
-      setQuranicBoys(quranicBoys)
-      ////////////////////call-4////////////////////////////////////////////
-      const response4 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/girls`);
-      const trendingGirls = response4.data;
+      const response4 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/girls?page=${currentTrendingGirls}`);
+      const trendingGirls = response4.data.allNames;
       setTrendingGirls(trendingGirls)
+      setTotalPagesTrendingGirls(response4.data.totalPages)
+      setLoading(false)
+
+      ////////////////////call-3////////////////////////////////////////////
+      const response1 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/boys?page=${currentQuranicBoys}`);
+      const quranicBoys = response1.data.allNames;
+      setQuranicBoys(quranicBoys)
+      setTotalPagesQuranicBoys(response1.data.totalPages)
+      setLoading(false)
+
+      ////////////////////call-4////////////////////////////////////////////
+      const response2 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/girls?page=${currentQuranicGirls}`);
+      const quranicGirls = response2.data.allNames;
+      setQuranicGirls(quranicGirls)
+      console.log(response2.data.totalPages)
+      setTotalPagesQuranicGirls(response2.data.totalPages)
+      setLoading(false)
+
       ////////////////////call-5////////////////////////////////////////////
-      const response5 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/allah`);
-      const allah = response5.data;
+      const response5 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/allah?page=${currentAllah}`);
+      const allah = response5.data.allNames;
       setAllah(allah)
+      setTotalPagesAllah(response5.data.totalPages)
+      setLoading(false)
+
       ////////////////////call-6////////////////////////////////////////////
-      const response6 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/muhammad`);
-      const muhammad = response6.data;
+      const response6 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/muhammad?page=${currentMuhammad}`);
+      const muhammad = response6.data.allNames;
       setMuhammad(muhammad)
+      setTotalPagesMuhammad(response6.data.totalPages)
+      setLoading(false)
+
     } catch (error) {
       console.log(error)
     }
   }
-  useEffect(() => {
+
+    
+useEffect(() => {
     getData();
-  }, []);
+  }, [currentTrendingBoys, currentTrendingGirls, currentQuranicBoys, currentQuranicGirls, currentAllah, currentMuhammad]);
   return (
     <div id="trending">
       <div className='container' data-aos="fade-up">
@@ -149,8 +197,26 @@ const TrendingSection = () => {
         activeBtnIndex === 5 ? muhammad :
         null
   }
+  totalPages={
+    activeBtnIndex === 0 ? totalPagesTrendingBoys : 
+    activeBtnIndex === 1 ? totalPagesTrendingGirls :
+    activeBtnIndex === 2 ? totalPagesQuranicBoys :
+    activeBtnIndex === 3 ? totalPagesQuranicGirls :
+    activeBtnIndex === 4 ? totalPagesAllah :
+    activeBtnIndex === 5 ? totalPagesMuhammad :
+    null
+  }
+  currentPage={
+    activeBtnIndex === 0 ? currentTrendingBoys : 
+    activeBtnIndex === 1 ? currentTrendingGirls :
+    activeBtnIndex === 2 ? currentQuranicBoys :
+    activeBtnIndex === 3 ? currentQuranicGirls :
+    activeBtnIndex === 4 ? currentAllah :
+    activeBtnIndex === 5 ? currentMuhammad :
+    null
+  }
+  onPageChange={handlePageChange}
 />}
-
           </div>
           <div></div>
         </div>

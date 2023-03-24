@@ -30,7 +30,6 @@ const ByAlphabetsCard = ({ marginZero, data, totalPages, currentPage, onPageChan
   
   const pagesToShow = 2;
 const range = Math.floor(pagesToShow / 2);
- 
   return (
     <div className={`trending-card ${marginZero}`}>
       <div>

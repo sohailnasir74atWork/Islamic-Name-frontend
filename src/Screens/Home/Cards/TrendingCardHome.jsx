@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react'
 import Translate from '../../../Common/Translat';
 import "../Style/TrendingCard.scss"
 
-const TrendingCardHome = ({ marginZero, data }) => {
+const TrendingCardHome = ({ marginZero, data, totalPages, currentPage, onPageChange }) => {
   const [like, setLike] = useState(Array(data.length).fill(false));
   const [show, setShow] = useState(Array(data.length).fill(false));
   const [activeIndex, setActiveIndex] = useState(null);
-
-
+  
 
   const handleLikeClick = (index) => {
     setActiveIndex(index);
@@ -31,7 +30,8 @@ const TrendingCardHome = ({ marginZero, data }) => {
   
   const pagesToShow = 2;
 const range = Math.floor(pagesToShow / 2);
- 
+
+
   return (
     <div className={`trending-card ${marginZero}`}>
       <div>
@@ -90,11 +90,11 @@ const range = Math.floor(pagesToShow / 2);
             </div>
           );
         })}
-      {/* <div className='pagination-container'>
+       <div className='pagination-container'>
   <nav aria-label="Page navigation example">
     <ul className="pagination">
       <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
-        <a className="page-link" href="#" onClick={() => onPageChange(currentPage - 1)} aria-label="Previous">
+        <a className="page-link" href="#trending" onClick={() => onPageChange(currentPage - 1)} aria-label="Previous">
           <span aria-hidden="true">&laquo;</span>
           <span className="sr-only">Previous</span>
         </a>
@@ -105,21 +105,21 @@ const range = Math.floor(pagesToShow / 2);
             (pageNumber >= currentPage - range && pageNumber <= currentPage + range)) {
           return (
             <li key={index} className={`page-item ${pageNumber === currentPage ? 'active' : ''}`}>
-              <a className="page-link" href="#" onClick={() => onPageChange(pageNumber)}>{pageNumber}</a>
+              <a className="page-link" href="#trending" onClick={() => onPageChange(pageNumber)}>{pageNumber}</a>
             </li>
           );
         }
         if (pageNumber === currentPage - range - 1 || pageNumber === currentPage + range + 1) {
           return (
             <li key={index} className="page-item disabled">
-              <a className="page-link" href="#">...</a>
+              <a className="page-link" href="#trending">...</a>
             </li>
           );
         }
         return null;
       })}
       <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
-        <a className="page-link" href="#" onClick={() => onPageChange(currentPage + 1)} aria-label="Next">
+        <a className="page-link" href="#trending" onClick={() => onPageChange(currentPage + 1)} aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
           <span className="sr-only">Next</span>
         </a>
@@ -135,7 +135,7 @@ const range = Math.floor(pagesToShow / 2);
       </li>
     </ul>
   </nav>
-</div> */}
+</div>
 
       </div>
     </div>
