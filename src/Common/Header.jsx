@@ -22,7 +22,7 @@ const Header = () => {
   //   return () => window.removeEventListener('scroll', handleScroll);
   // }, [document.getElementById('bars-stop')]);
   useEffect(() => {
-    if (location.pathname === "/trending" ) {
+    if (location.pathname === "/#trending" ) {
       const trendingSection = document.getElementById("trending");
       if (trendingSection) {
         trendingSection.scrollIntoView();
@@ -48,19 +48,19 @@ const Header = () => {
         <div className='col mt-auto mobile-header'>
           <ul className='row'>
             <li className='col' >
-              <Link to="/trending" onClick={handleClick}>
+              <Link to="/#trending" onClick={handleClick}>
               Trending Names</Link>
             </li>
             <li className='col'>
-            <Link to="/trending" onClick={handleClick}>
+            <Link to="/#trending" onClick={handleClick}>
               Quranic Names</Link>
             </li >
             <li className='col'> 
-            <Link to="/trending" onClick={handleClick}>
+            <Link to="/#trending" onClick={handleClick}>
             Allah's Names</Link>
           </li>
             <li className='col' >
-            <Link to="/trending" onClick={handleClick}>
+            <Link to="/#trending" onClick={handleClick}>
             Muhammad's Names</Link>
             </li>
            <li className='col col-md-2'>

@@ -61,20 +61,20 @@ const Banner = () => {
             <span className='show-detail-close' onClick={handleShowDetail}>
               <button type="button" class="btn-close" aria-label="Close"></button>
           </span>
-            <div className='pop-up-info container p-3'>
-              <span className='row m-2'>
+            <div className='pop-up-info container p-2'>
+              <span className='row m-1'>
               <td className='col-4'>Name:</td>
               <td className='col-8'>{info.name}</td>
               </span>
-              <span className='row m-2'>
+              <span className='row m-1'>
               <td className='col-4'>Urdu Name:</td>
               <td className='col-8 urdu-cont justify-content-start d-flex'>{info.urduName}</td>
               </span>
-              <span className='row m-2'>
+              <span className='row m-1'>
               <td className='col-4'>English Meaning:</td>
               <td className='col-8'>{info.englishMeaning}</td>
               </span >
-              <span className='row m-2'>
+              <span className='row m-1'>
               <td className='col-4'>Urdu Meaning:</td>
               <td className='col-8'>{<Translate text={info.englishMeaning} bg="var(--color-three)" cl="var(--color-one)" />}</td>
               </span>

@@ -53,60 +53,157 @@ const TrendingSection = () => {
     setActiveBtnIndex(index);
   };
   //////////////////////////////api call///////////////////////
-  const getData = async () => {
+  // const getData = async () => {
 
-    try {
-      ////////////////////call-1////////////////////////////////////////////
-      const response3 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/boys?page=${currentTrendingBoys}`);
-      const trendingBoys = response3.data.allNames;
-      setTrendingBoys(trendingBoys)
-      setTotalPagesTrendingBoys(response3.data.totalPages)
-      setLoading(false)
-      ////////////////////call-2////////////////////////////////////////////
-      const response4 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/girls?page=${currentTrendingGirls}`);
-      const trendingGirls = response4.data.allNames;
-      setTrendingGirls(trendingGirls)
-      setTotalPagesTrendingGirls(response4.data.totalPages)
-      setLoading(false)
+  //   try {
+  //     ////////////////////call-1////////////////////////////////////////////
+  //     const response3 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/boys?page=${currentTrendingBoys}`);
+  //     const trendingBoys = response3.data.allNames;
+  //     setTrendingBoys(trendingBoys)
+  //     setTotalPagesTrendingBoys(response3.data.totalPages)
+  //     ////////////////////call-2////////////////////////////////////////////
+  //     const response4 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/girls?page=${currentTrendingGirls}`);
+  //     const trendingGirls = response4.data.allNames;
+  //     setTrendingGirls(trendingGirls)
+  //     setTotalPagesTrendingGirls(response4.data.totalPages)
 
-      ////////////////////call-3////////////////////////////////////////////
-      const response1 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/boys?page=${currentQuranicBoys}`);
-      const quranicBoys = response1.data.allNames;
-      setQuranicBoys(quranicBoys)
-      setTotalPagesQuranicBoys(response1.data.totalPages)
-      setLoading(false)
+  //     ////////////////////call-3////////////////////////////////////////////
+  //     const response1 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/boys?page=${currentQuranicBoys}`);
+  //     const quranicBoys = response1.data.allNames;
+  //     setQuranicBoys(quranicBoys)
+  //     setTotalPagesQuranicBoys(response1.data.totalPages)
 
-      ////////////////////call-4////////////////////////////////////////////
-      const response2 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/girls?page=${currentQuranicGirls}`);
-      const quranicGirls = response2.data.allNames;
-      setQuranicGirls(quranicGirls)
-      console.log(response2.data.totalPages)
-      setTotalPagesQuranicGirls(response2.data.totalPages)
-      setLoading(false)
+  //     ////////////////////call-4////////////////////////////////////////////
+  //     const response2 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/girls?page=${currentQuranicGirls}`);
+  //     const quranicGirls = response2.data.allNames;
+  //     setQuranicGirls(quranicGirls)
+  //     console.log(response2.data.totalPages)
+  //     setTotalPagesQuranicGirls(response2.data.totalPages)
 
-      ////////////////////call-5////////////////////////////////////////////
-      const response5 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/allah?page=${currentAllah}`);
-      const allah = response5.data.allNames;
-      setAllah(allah)
-      setTotalPagesAllah(response5.data.totalPages)
-      setLoading(false)
+  //     ////////////////////call-5////////////////////////////////////////////
+  //     const response5 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/allah?page=${currentAllah}`);
+  //     const allah = response5.data.allNames;
+  //     setAllah(allah)
+  //     setTotalPagesAllah(response5.data.totalPages)
 
-      ////////////////////call-6////////////////////////////////////////////
-      const response6 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/muhammad?page=${currentMuhammad}`);
-      const muhammad = response6.data.allNames;
-      setMuhammad(muhammad)
-      setTotalPagesMuhammad(response6.data.totalPages)
-      setLoading(false)
+  //     ////////////////////call-6////////////////////////////////////////////
+  //     const response6 = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/muhammad?page=${currentMuhammad}`);
+  //     const muhammad = response6.data.allNames;
+  //     setMuhammad(muhammad)
+  //     setTotalPagesMuhammad(response6.data.totalPages)
+  //     setLoading(false)
 
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
     
+// useEffect(() => {
+//     getData();
+//   }, [currentTrendingBoys, currentTrendingGirls, currentQuranicBoys, currentQuranicGirls, currentAllah, currentMuhammad]);
+
+
+const getTrendingBoys = async () => {
+  try {
+    const response = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/boys?page=${currentTrendingBoys}`);
+    setTrendingBoys(response.data.allNames);
+    setTotalPagesTrendingBoys(response.data.totalPages);
+    setLoading(false);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const getTrendingGirls = async () => {
+  try {
+    const response = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/trending/girls?page=${currentTrendingGirls}`);
+    setTrendingGirls(response.data.allNames);
+    setTotalPagesTrendingGirls(response.data.totalPages);
+    setLoading(false);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const getQuranicBoys = async () => {
+  try {
+    const response = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/boys?page=${currentQuranicBoys}`);
+    setQuranicBoys(response.data.allNames);
+    setTotalPagesQuranicBoys(response.data.totalPages);
+    setLoading(false);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const getQuranicGirls = async () => {
+  try {
+    const response = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/quranic/girls?page=${currentQuranicGirls}`);
+    setQuranicGirls(response.data.allNames);
+    setTotalPagesQuranicGirls(response.data.totalPages);
+    setLoading(false);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const getAllah = async () => {
+  try {
+    const response = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/allah?page=${currentAllah}`);
+    setAllah(response.data.allNames);
+    setTotalPagesAllah(response.data.totalPages);
+    setLoading(false);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const getMuhammad = async () => {
+  try {
+    const response = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names/muhammad?page=${currentMuhammad}`);
+    setMuhammad(response.data.allNames);
+    setTotalPagesMuhammad(response.data.totalPages);
+    setLoading(false);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const getData = async () => {
+  try {
+    await Promise.all([getTrendingBoys(), getTrendingGirls(), getQuranicBoys(), getQuranicGirls(), getAllah(), getMuhammad()]);
+    setLoading(false);
+  } catch (error) {
+    console.log(error);
+  }
+}
 useEffect(() => {
-    getData();
-  }, [currentTrendingBoys, currentTrendingGirls, currentQuranicBoys, currentQuranicGirls, currentAllah, currentMuhammad]);
+  getTrendingBoys();
+}, [currentTrendingBoys]);
+
+useEffect(() => {
+  getTrendingGirls();
+}, [currentTrendingGirls]);
+useEffect(() => {
+  getQuranicBoys();
+}, [currentQuranicBoys]);
+useEffect(() => {
+  getQuranicGirls();
+}, [currentQuranicGirls]);
+useEffect(() => {
+  getAllah();
+}, [currentAllah]);
+useEffect(() => {
+  getMuhammad();
+}, [currentMuhammad]);
+
+useEffect(() => {
+  getData();
+}, [activeBtnIndex]);
+
+
+
   return (
     <div id="trending">
       <div className='container' data-aos="fade-up">

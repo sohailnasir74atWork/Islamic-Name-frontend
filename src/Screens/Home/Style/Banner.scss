@@ -181,8 +181,8 @@
 
 }
 .show-detail-cont{
-  height: 60%;
-  width: 60%;
+  min-height: 40%;
+  width: 40%;
   position: relative;
   top: 50%;
   left: 50%;
@@ -194,7 +194,7 @@
 @media (max-width: 550px) {
   .show-detail-cont{
     height: 60%;
-    width: 95%;
+    width: 90%;
     border-radius: 0px;
   
   }
@@ -217,6 +217,8 @@
   color: var(--color-one);
   font-size: large;
   border-bottom: 1px solid gray;
+  min-height: 50px;
+
 }
 
 @media (max-width: 550px) {

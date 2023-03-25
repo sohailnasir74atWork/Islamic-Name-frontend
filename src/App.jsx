@@ -16,10 +16,7 @@ const router = createBrowserRouter([
     path: "/",
     element:<Main/>,
     children:[
-      {
-        path: "/trending",
-        element: <Home/>,
-      },
+      
       {
         path: "/",
         element: <Home/>,
