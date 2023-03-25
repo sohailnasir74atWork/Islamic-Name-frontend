@@ -110,6 +110,11 @@
     font-weight: 500;
     z-index: 3;
 }
+.banner-urdu h2{
+  
+  font-family: var(--urdu-font);
+  
+}
 @media (max-width: 550px) {
   .banner-urdu {
     font-size: 1.5rem;
