@@ -2,12 +2,13 @@ import React, { useEffect } from 'react'
 import TrendingCard from './Cards/TrendingCard'
 import "./Style/TrendingSection.scss"
 import { useState } from 'react';
+import { useGlobalState } from "../../GlobelState";
 import { useRef } from 'react';
 import ExtractData from '../../Common/DataExtracter';
 import TrendingCardHome from './Cards/TrendingCardHome';
 import axios, { all } from 'axios';
 const TrendingSection = () => {
-  const [activeBtnIndex, setActiveBtnIndex] = useState(0)
+  // const [activeBtnIndex, setActiveBtnIndex] = useState(0)
   const [trendingGirls, setTrendingGirls] = useState([]);
   const [trendingBoys, setTrendingBoys] = useState([]);
   const [quranicGirls, setQuranicGirls] = useState([]);
@@ -28,6 +29,7 @@ const TrendingSection = () => {
   const [currentQuranicGirls, setCurrentQuranicGirls] = useState(1);
   const [currentAllah, setCurrentAllah] = useState(1);
   const [currentMuhammad, setCurrentMuhammad] = useState(1);
+  const { activeBtnIndex, handleButtonClick } = useGlobalState();
   const toggleTab = () => {
     setIsOpen(!isOpen);
   }
@@ -49,9 +51,9 @@ const TrendingSection = () => {
     }
   };
   console.log(currentTrendingBoys)
-  const handleButtonClick = (index) => {
-    setActiveBtnIndex(index);
-  };
+  // const handleButtonClick = (index) => {
+  //   setActiveBtnIndex(index);
+  // };
   //////////////////////////////api call///////////////////////
   // const getData = async () => {
 

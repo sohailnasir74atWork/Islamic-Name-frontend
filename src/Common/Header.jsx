@@ -3,10 +3,13 @@ import "./header.scss"
 import logo from "../images/logo-1.svg"
 import { Link } from 'react-router-dom'
 import { useLocation, useNavigate } from 'react-router-dom';
+import TrendingSection from '../Screens/Home/TrendingSection';
+import { useGlobalState } from '../GlobelState';
 
 
 const Header = () => {
-  
+  const { activeBtnIndex, setActiveBtnIndex } = useGlobalState();
+
   const location = useLocation();
   // const [showIcon, setShowIcon] = useState(false); // new state variable
   // useEffect(() => {
@@ -31,11 +34,14 @@ const Header = () => {
   }, [location.pathname]);
 
 
-  function handleClick() {
+  function handleClick(e) {
+    
     const trendingSection = document.getElementById('trending');
+    console.log(trendingSection)
     if (trendingSection) {
       trendingSection.scrollIntoView();
     }
+    setActiveBtnIndex(e)
   }
  
   return (
@@ -48,19 +54,19 @@ const Header = () => {
         <div className='col mt-auto mobile-header'>
           <ul className='row'>
             <li className='col' >
-              <Link to="/#trending" onClick={handleClick}>
+              <Link to="/#trending" onClick={ ()=>handleClick(0)}>
               Trending Names</Link>
             </li>
             <li className='col'>
-            <Link to="/#trending" onClick={handleClick}>
+            <Link to="/#trending" onClick={ ()=>handleClick(2)}>
               Quranic Names</Link>
             </li >
             <li className='col'> 
-            <Link to="/#trending" onClick={handleClick}>
+            <Link to="/#trending" onClick={()=>handleClick(4)}>
             Allah's Names</Link>
           </li>
             <li className='col' >
-            <Link to="/#trending" onClick={handleClick}>
+            <Link to="/#trending" onClick={()=>handleClick(5)}>
             Muhammad's Names</Link>
             </li>
            <li className='col col-md-2'>
@@ -68,6 +74,7 @@ const Header = () => {
               <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
               <span className='dark-mode'>Dark</span>
             </div>
+            
             </li>
           </ul>
         </div>

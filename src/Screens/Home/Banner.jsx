@@ -15,6 +15,9 @@ const Banner = () => {
   setInfo(clickedObject)
     setShowDetail(!showDetail)
   }
+
+
+
   const handleSearch = async (event) => {
     const query = event.target.value;
     setSearchQuery(query);
@@ -32,6 +35,11 @@ const Banner = () => {
       alert('Failed to search for names.');
     }
   };
+  const handleClickSearch = async()=> {
+    
+    setInfo(searchResults[0])
+    setShowDetail(true)
+}
   console.log(info)
   return (
     <div>
@@ -40,9 +48,15 @@ const Banner = () => {
         <h2 className='banner-urdu' style={{ fontFamily: 'Jameel Noori Nastaleeq' }}>بچوں کے خوبصورت اسلامی نام</h2>
         <div class="input-group mt-3 search-field">
           <input value={searchQuery}
-            onChange={handleSearch} type="text" class="form-control h-50" placeholder="Search Name" />
+            onChange={handleSearch} 
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                handleClickSearch();
+              }
+            }} 
+            type="text" class="form-control h-50" placeholder="Search Name" />
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary h-50" type="button">
+            <button class="btn btn-outline-secondary h-50" type="button" onClick={handleClickSearch}>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
               </svg>
