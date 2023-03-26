@@ -62,7 +62,7 @@ const range = Math.floor(pagesToShow / 2);
                 <td className='mobile-hide col-3 tac'><button className='btn btn-primary btn-cont' onClick={()=>handleUrduClick(index)}>Check Urdu Meaning</button></td>
                 <td className='mobile-hide col-4'>{item.englishMeaning}</td>
                <td className='mobile-hide urdu-cont col-2 p-0'>
-              <span className='span-heart'>1650 People liked</span>
+              <span className='span-heart'>{item.like} People liked</span>
                 <i className={`fa-regular fa-heart${index === activeIndex ? ' fa-solid' : ''} p-2 heart`}
                     onClick={()=>{handleLikeClick(index)}}
                   ></i>
@@ -79,9 +79,9 @@ const range = Math.floor(pagesToShow / 2);
               {show [index]&&<> <span> {<Translate text={item.englishMeaning}/>}</span>
               <span className='hide tac m-1' style={{fontFamily:"var(--text-font)", fontSize:".7rem"}}>English Meaning: {item.englishMeaning}</span>
               <td className='hide urdu-cont col'>
-              <span className='span-heart'>1650 People liked</span>
+              <span className='span-heart'>{item.like} People liked</span>
                 <i className={`fa-regular fa-heart${index === activeIndex ? ' fa-solid' : ''} p-2 heart`}
-                    onClick={()=>{handleLikeClick(index)}}
+                    onClick={()=>{handleLikeClick()}}
                   ></i>
                 </td>
               </>
