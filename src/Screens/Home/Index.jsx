@@ -25,10 +25,9 @@ const Home = () => {
       }
     }, [location.pathname]);
     
-console.log("cjecking" ,darkMode)
 
   return (
-    <div className={`${darkMode? "dark-m ode-active" : ""}`}>
+    <div className={` pb-1 ${darkMode? "dark-m ode-active" : ""}`}>
         <Banner/>
         <ABCsection/>
         <TrendingSection/>

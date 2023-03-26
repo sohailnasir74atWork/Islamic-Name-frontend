@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-const Translate = ({ text, bg="var(--color-five)" , cl="var(--color-three)"}, ca="justify-content-center") => {
+const Translate = ({ text, bg="bg-1" }, ca="justify-content-center") => {
   const [urdu, setUrdu] = useState("");
   const [loading, setLoading] = useState(true)
   useEffect(() => {
@@ -30,7 +30,7 @@ const Translate = ({ text, bg="var(--color-five)" , cl="var(--color-three)"}, ca
     <span class="sr-only">Loading...</span>
   </div>
 </div>)}
-      {!loading  && <div className='urdu-cont d-flex  tac' style={{minHeight:"50px", background:bg, color:cl}}>{urdu}</div>}
+      {!loading  && <div className={`urdu-cont d-flex  tac ${bg}`} style={{minHeight:"50px"}}>{urdu}</div>}
     </div>
   );
 };

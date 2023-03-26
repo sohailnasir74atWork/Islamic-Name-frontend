@@ -38,7 +38,7 @@ const BoysABC = () => {
   }, [id, currentPage]);
 
   return (
-    <div className='container'>
+    <div className='container pt-3'>
       <div className='section-title-main heading-by-abc'>
         <h2 className='' >BOYS NAMES STARTING WITH {`"${id}"`}</h2>
         <h3><span>کے ساتھ شروع ہونے والے نام </span>{id}</h3>

@@ -136,7 +136,7 @@
 .search-tab ul {
   padding: 0px;
   width: 55%;
-  max-height: 300px;
+  max-height: 200px;
   overflow-x: auto;
   scrollbar-width: small;
   margin: 0px;
@@ -242,4 +242,12 @@
   }
   }
 
-  
+  .bg-1{
+    background-color: var(--color-one);
+    color: var(--color-three);
+  }
+  .bg{
+    background-color: var(--color-three);
+    color: var(--color-one);
+
+  }

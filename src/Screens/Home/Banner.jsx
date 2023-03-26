@@ -90,7 +90,7 @@ const Banner = () => {
               </span >
               <span className='row m-1'>
               <td className='col-4'>Urdu Meaning:</td>
-              <td className='col-8'>{<Translate text={info.englishMeaning} bg="var(--color-three)" cl="var(--color-one)" />}</td>
+              <td className='col-8'>{<Translate text={info.englishMeaning} bg="bg" />}</td>
               </span>
             </div>
           </div>

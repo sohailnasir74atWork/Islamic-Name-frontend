@@ -293,7 +293,7 @@ a:hover{
   }
 
 .dark-mode-active {
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
   background-color: #1E1E1E !important;
   background: #1E1E1E !important;
   color: white !important;
@@ -351,4 +351,27 @@ a:hover{
   }
   .dark-mode-active .search-tab ul li:hover{
     background-color: var(--color-one);
-    }
+  }
+.dark-mode-active .bg{
+    background-color:#282c34;
+    color: var(--color-three);
+  }
+  /* Set the width of the scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Set the color of the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Set the color of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* Use the Firefox-specific property to control the scrollbar width */
+* {
+  scrollbar-width: thin; /* "auto", "thin", or "none" */
+}
