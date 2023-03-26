@@ -6,6 +6,8 @@ export const GlobalStateContext = createContext();
 // Create a provider component that will wrap your app
 export function GlobalStateProvider({ children }) {
     const [activeBtnIndex, setActiveBtnIndex] = useState(0);
+    const [darkMode, setDarkMode] = useState(false);
+
 
     // Define your state and functions that modify your state
     const state = {
@@ -14,6 +16,10 @@ export function GlobalStateProvider({ children }) {
       handleButtonClick: (index) => {
         setActiveBtnIndex(index);
       },
+      handleDarkMode: ()=>{
+        setDarkMode(!darkMode)
+      },
+      darkMode
     };
 
   return (

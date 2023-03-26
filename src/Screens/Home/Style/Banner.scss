@@ -136,8 +136,14 @@
 .search-tab ul {
   padding: 0px;
   width: 55%;
+  max-height: 300px;
+  overflow-x: auto;
+  scrollbar-width: small;
   margin: 0px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+::-webkit-scrollbar {
+  width: 6px; /* set the width of the scrollbar */
 }
 @media (max-width: 550px) {
   .search-tab ul {

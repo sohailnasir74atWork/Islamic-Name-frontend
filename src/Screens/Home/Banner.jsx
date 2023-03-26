@@ -21,10 +21,10 @@ const Banner = () => {
   const handleSearch = async (event) => {
     const query = event.target.value;
     setSearchQuery(query);
-//     if (query.length < 2) {
-//       setSearchResults([]);
-//       return;
-//  }
+    if (query.length < 2) {
+      setSearchResults([]);
+      return;
+ }
     try {
       const response = await axios.get(`${process.env.REACT_APP_URL_SERVER}/names`, {
         params: { search: query },

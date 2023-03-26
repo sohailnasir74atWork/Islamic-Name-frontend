@@ -8,24 +8,27 @@ import PostArtical from './PostArtical'
 import PoweredbyCommunity from './PoweredbyCommunity'
 import TrendingSection from './TrendingSection'
 import { useLocation } from 'react-router-dom';
+import { useGlobalState } from "../../GlobelState";
 
 const Home = () => {
     const location = useLocation();
+    const  {darkMode} = useGlobalState()
     useEffect(() => {
       if (location.pathname === "/#trending") {
         const trendingSection = document.getElementById("trending");
         if (trendingSection) { // Check if element was found
-          trendingSection.scrollIntoView({ behavior: "smooth" }); // Use smooth scrolling
+          trendingSection.scrollIntoView({ behavior: "smooth" });
+           // Use smooth scrolling
         } else {
           console.error("Could not find element with id 'trending'");
         }
       }
     }, [location.pathname]);
     
-
+console.log("cjecking" ,darkMode)
 
   return (
-    <div>
+    <div className={`${darkMode? "dark-m ode-active" : ""}`}>
         <Banner/>
         <ABCsection/>
         <TrendingSection/>

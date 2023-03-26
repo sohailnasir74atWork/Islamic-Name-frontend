@@ -10,8 +10,8 @@ import Home from './Screens/Home/Index';
 import Artical from './Screens/Artical/Index';
 import BoysABC from './Screens/ByAlphabets/BoysABC';
 import GirlsABC from './Screens/ByAlphabets/GirlsABC.jsx';
-import Test from './Test';
 import {GlobalStateProvider} from './GlobelState';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,12 +40,14 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  
+
   return (
     <GlobalStateProvider>
     <AOSwrapper>
+      <div>
     <div className="App">
       <RouterProvider router={router}/>
+    </div>
     </div>
     </AOSwrapper>
     </GlobalStateProvider>

@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Style/PostArtical.scss"
-
 const PostArtical = () => {
     return (
         <div className='container'>
@@ -32,7 +31,6 @@ const PostArtical = () => {
                     <a href="" className="btn btn-primary">SUBMIT</a>
                     </div>
                 </form>
-                
             </div>
         </div>
         </div>

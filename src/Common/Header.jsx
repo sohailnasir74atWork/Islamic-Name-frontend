@@ -8,22 +8,9 @@ import { useGlobalState } from '../GlobelState';
 
 
 const Header = () => {
-  const { activeBtnIndex, setActiveBtnIndex } = useGlobalState();
-
+  const { activeBtnIndex, setActiveBtnIndex, handleDarkMode } = useGlobalState();
   const location = useLocation();
-  // const [showIcon, setShowIcon] = useState(false); // new state variable
-  // useEffect(() => {
-  //   function handleScroll() {
-  //     const mySection = document.getElementById('bars-stop');
-  //     if (window.scrollY >= mySection.offsetTop) {
-  //       setShowIcon(false);
-  //     } else {
-  //       setShowIcon(true);
-  //     }
-  //   }
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, [document.getElementById('bars-stop')]);
+  
   useEffect(() => {
     if (location.pathname === "/#trending" ) {
       const trendingSection = document.getElementById("trending");
@@ -37,7 +24,6 @@ const Header = () => {
   function handleClick(e) {
     
     const trendingSection = document.getElementById('trending');
-    console.log(trendingSection)
     if (trendingSection) {
       trendingSection.scrollIntoView();
     }
@@ -71,7 +57,7 @@ const Header = () => {
             </li>
            <li className='col col-md-2'>
             <div className="form-check form-switch mt-auto d-flex justify-content-end">
-              <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+              <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onChange={()=>handleDarkMode()}/>
               <span className='dark-mode'>Dark</span>
             </div>
             
