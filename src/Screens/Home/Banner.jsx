@@ -36,7 +36,9 @@ const Banner = () => {
     }
   };
   const handleClickSearch = ()=> {
-    if(searchResults.length<1) return
+    if(searchResults.length<1) 
+    setSearchResults([])
+    return
     setInfo( searchResults[0] )
     setShowDetail(true)
 }
